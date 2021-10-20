@@ -49,6 +49,7 @@ html {
 }
 
 body {
+  background-color: #a3ffe0;
   box-sizing: border-box;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -78,6 +79,22 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: pink;
+}
+
+.card {
+  flex: 0 0 150px;
+  background-color: #232323;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 15px #232323;
+  min-height: 200px;
+  margin: 3rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2.5rem 10rem;
 }
 
 .header {

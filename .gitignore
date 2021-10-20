@@ -1,0 +1,4 @@
+node_modules/
+.sass-cache/*
+*.css.map
+linea_complete_1.0/

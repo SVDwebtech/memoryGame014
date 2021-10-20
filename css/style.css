@@ -1,0 +1,69 @@
+/*
+0px			- 		600px:			Phone
+600px		-		900px:			Tablet Portrait
+900px		-		1200px:			Tablet Landscape
+1200px		-		1800px:			Desktop First Approach (is where our normal styles apply)
+1800px +							Big Desktop
+
+$breakpoint argument choices
+	- phone
+	- tab-port
+	- tab-land
+	- big-desktop
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+@keyframes moveInLeft {}
+@keyframes moveInRight {}
+@keyframes moveInBottom {}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 	1rem is equal to 10px */
+  /* 	because 10px / 10 is equal to 1rem */
+  /* 	therefore 30px is equal to 3rem */
+  /* 	the default font size of the browser is 16px */
+  /* 	10px / 16px *100 = 62.5% */
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: pink;
+}
+
+/*# sourceMappingURL=style.css.map */

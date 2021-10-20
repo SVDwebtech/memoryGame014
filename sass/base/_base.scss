@@ -32,9 +32,24 @@ html {
 
 body {
 	box-sizing: border-box;
-	padding: 3rem;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
 
-	@include respond(tab-port) {
-		padding: 0;
-	}
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }

@@ -80,4 +80,14 @@ body {
   color: pink;
 }
 
+.header {
+  text-align: center;
+  background-color: #232323;
+  padding: 2rem;
+}
+.header .gameInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,10 @@
+.header {
+	text-align: center;
+	background-color: rgb(35, 35, 35);
+	padding: 2rem;
 
+	.gameInfo {
+		display: flex;
+		justify-content: space-evenly;
+	}
+}

@@ -90,8 +90,16 @@ body {
   text-transform: lowercase;
 }
 
+.gameInfo__playerInfo {
+  color: slategray;
+}
+
 .u-margin-large-div-bottom {
   margin-bottom: 2.55rem;
+}
+
+.btn {
+  margin: 1rem;
 }
 
 .card {
@@ -118,6 +126,26 @@ body {
 .header .gameInfo {
   display: flex;
   justify-content: space-evenly;
+}
+.header .gameInfo__playerInfo, .header .gameInfo__gameSettings, .header .gameInfo__gameWinners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #a3ffe0;
+  box-shadow: 2px 2px 15px black;
+  padding: 2rem;
+  margin: 2rem;
+}
+.header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem, .header .gameInfo__gameWinners--infoItem {
+  margin: 0.5rem;
+}
+.header .gameInfo__playerInfo--checkboxItem, .header .gameInfo__gameSettings--checkboxItem, .header .gameInfo__gameWinners--checkboxItem {
+  display: inline-block;
+  margin: 0.75rem;
+}
+.header .gameInfo__playerInfo--winnerItem, .header .gameInfo__gameSettings--winnerItem, .header .gameInfo__gameWinners--winnerItem {
+  margin: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

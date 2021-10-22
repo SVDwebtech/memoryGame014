@@ -16,21 +16,39 @@
         
         <div class="gameInfo">
             <div class="gameInfo__playerInfo">
-                <input type="text" name="" id="" placeholder="Enter your name">
-                <p>Timer: 10m:00s</p>
-                <p>Flips: 100</p>
+                <h2>Player Info:</h2>
+                <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem">____Enter your name</p>
+                <p class="gameInfo__playerInfo--time gameInfo__playerInfo--infoItem">00m:00s</p>
+                <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem">000</p>
             </div>
             <div class="gameInfo__gameSettings">
-                <button>New Game</button>
-                <p>Timer: 10m:00s</p>
-                <p>Flips: 100</p>
-                 <button>Start</button>
+                <h2>Game Settings:</h2>
+                <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem" type="text" name="" id="" placeholder="Enter your name">
+                <div class="gameinfo__gameSettings--gamedifficulty">
+                    <div class="gameInfo__gameSettings--easy gameInfo__gameSettings--checkboxItem">
+                        <input type="checkbox" id="easy" name="easy" checked>
+                        <label for="easy">Easy</label>
+                    </div>
+                    <div class="gameInfo__gameSettings--medium gameInfo__gameSettings--checkboxItem">
+                        <input type="checkbox" id="edium" name="edium">
+                        <label for="edium">Medium</label>
+                    </div>
+                    <div class="gameInfo__gameSettings--hard gameInfo__gameSettings--checkboxItem">
+                        <input type="checkbox" id="hard" name="hard">
+                        <label for="hard">Hard</label>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn__loadGame">Load Game</button>
+                    <button class="btn btn__resetAndShuffle">Reset and Shuffle</button>
+                    <button class="btn btn__newPlayer">New Player</button>
+                </div>
             </div>   
             <div class="gameInfo__gameWinners">
-                <p>Champs:</p>
-                <p>Schalk: 54 flips left, 10m:34s left</p>
-                <p>Esna: 48 flips left, 10m:58s left</p>
-                <p>Corrie: 35 flips left, 11m:22s left</p>
+                <h2>Leader Board:</h2>
+                <p class="gameInfo__gameWinners--firstPos gameInfo__gameWinners--winnerItem">Schalk: 54 flips left, 10m:34s left</p>
+                <p class="gameInfo__gameWinners--secondPos gameInfo__gameWinners--winnerItem">Esna: 48 flips left, 10m:58s left</p>
+                <p class="gameInfo__gameWinners--thirdPos gameInfo__gameWinners--winnerItem">Corrie: 35 flips left, 11m:22s left</p>
             </div>
         </div>
     </header>

@@ -90,7 +90,7 @@ body {
   text-transform: lowercase;
 }
 
-.gameInfo__playerInfo {
+.gameInfo {
   color: slategray;
 }
 
@@ -100,6 +100,9 @@ body {
 
 .btn {
   margin: 1rem;
+}
+.btn__display {
+  display: none;
 }
 
 .card {

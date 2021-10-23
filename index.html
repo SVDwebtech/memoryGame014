@@ -17,31 +17,31 @@
         <div class="gameInfo">
             <div class="gameInfo__playerInfo">
                 <h2>Player Info:</h2>
-                <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem">____Enter your name</p>
+                <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem playerNameDisplay">____enter new player name</p>
                 <p class="gameInfo__playerInfo--time gameInfo__playerInfo--infoItem">00m:00s</p>
                 <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem">000</p>
             </div>
             <div class="gameInfo__gameSettings">
                 <h2>Game Settings:</h2>
-                <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem" type="text" name="" id="" placeholder="Enter your name">
-                <div class="gameinfo__gameSettings--gamedifficulty">
+                <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem nameInputDisplay" type="text" name="" id="" placeholder="Enter your name">
+                <div class="gameinfo__gameSettings--gamedifficulty gameDifficultyCheckboxes">
                     <div class="gameInfo__gameSettings--easy gameInfo__gameSettings--checkboxItem">
-                        <input type="checkbox" id="easy" name="easy" checked>
+                        <input type="radio" id="easy" name="gameDifficulty" checked>
                         <label for="easy">Easy</label>
                     </div>
                     <div class="gameInfo__gameSettings--medium gameInfo__gameSettings--checkboxItem">
-                        <input type="checkbox" id="edium" name="edium">
-                        <label for="edium">Medium</label>
+                        <input type="radio" id="medium" name="gameDifficulty">
+                        <label for="medium">Medium</label>
                     </div>
                     <div class="gameInfo__gameSettings--hard gameInfo__gameSettings--checkboxItem">
-                        <input type="checkbox" id="hard" name="hard">
+                        <input type="radio" id="hard" name="gameDifficulty">
                         <label for="hard">Hard</label>
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="btn btn__loadGame">Load Game</button>
-                    <button class="btn btn__resetAndShuffle">Reset and Shuffle</button>
-                    <button class="btn btn__newPlayer">New Player</button>
+                    <button class="btn btn__loadGame loadGameBtn">Load Game</button>
+                    <button class="btn btn__display btn__resetAndShuffle resetAndShuffleBtn">Reset and Shuffle</button>
+                    <button class="btn btn__display btn__newPlayer newPlayerBtn">New Player</button>
                 </div>
             </div>   
             <div class="gameInfo__gameWinners">

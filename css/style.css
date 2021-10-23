@@ -106,12 +106,21 @@ body {
 }
 
 .card {
-  flex: 0 0 150px;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  flex: 0 0 20rem;
+}
+.card__side {
   background-color: #232323;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 15px #232323;
   min-height: 200px;
   margin: 3rem;
+  transition: all 0.8s;
+}
+
+.rotateCard {
+  transform: rotateY(180deg);
 }
 
 .card-container {

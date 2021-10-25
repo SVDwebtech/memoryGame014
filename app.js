@@ -8,7 +8,8 @@ const resetAndShuffleBtn = document.querySelector(".resetAndShuffleBtn");
 const newPlayerBtn = document.querySelector(".newPlayerBtn");
 const cardDisplay = document.querySelectorAll(".cardDisplay");
 const cardContainer = document.querySelector(".card-container");
-const cardSideDisplay = document.querySelectorAll(".card__side");
+const cardSideDisplayFront = document.querySelectorAll(".card__side--front");
+const cardSideDisplayBack = document.querySelectorAll(".card__side--back");
 
 loadGameBtn.addEventListener("click", function() {
 	playerNameDislpay.textContent = nameInputDisplay.value;
@@ -39,17 +40,18 @@ for (let i = 0; i < cardDisplay.length; i++)
 		clickCount++;
 		console.log("clickCount = " + clickCount);
 		if (counter <= 1) {
-			cardSideDisplay[i].style.backgroundColor = "red";
-			cardSideDisplay[i].classList.toggle("rotateCard");
+			// cardSideDisplay[i].style.backgroundColor = "red";
+			cardSideDisplayFront[i].classList.toggle("rotateCard180");
+			cardSideDisplayBack[i].classList.toggle("rotateCard0");
 		}
 		if (counter === 0) {
-			compareCardOneText = cardSideDisplay[i].textContent;
+			compareCardOneText = cardSideDisplayBack[i].textContent;
 			console.log(compareCardOneText);
 			cardNumOne = i;
 			console.log(cardNumOne);
 		}
 		if (counter === 1) {
-			compareCardTwoText = cardSideDisplay[i].textContent;
+			compareCardTwoText = cardSideDisplayBack[i].textContent;
 			console.log(compareCardTwoText);
 			cardNumTwo = i;
 			console.log(cardNumTwo);
@@ -64,12 +66,18 @@ for (let i = 0; i < cardDisplay.length; i++)
 				counter = 0;
 				compareCardOneText = "";
 				compareCardTwoText = "";
-				cardSideDisplay[cardNumOne].style.backgroundColor =
-					"rgb(35, 35, 35)";
-				cardSideDisplay[cardNumTwo].style.backgroundColor =
-					"rgb(35, 35, 35)";
-				cardSideDisplay[cardNumOne].classList.toggle("rotateCard");
-				cardSideDisplay[cardNumTwo].classList.toggle("rotateCard");
+				// cardSideDisplay[cardNumOne].style.backgroundColor =
+				// 	"rgb(35, 35, 35)";
+				// cardSideDisplay[cardNumTwo].style.backgroundColor =
+				// 	"rgb(35, 35, 35)";
+				cardSideDisplayFront[cardNumOne].classList.toggle(
+					"rotateCard180"
+				);
+				cardSideDisplayBack[cardNumOne].classList.toggle("rotateCard0");
+				cardSideDisplayFront[cardNumTwo].classList.toggle(
+					"rotateCard180"
+				);
+				cardSideDisplayBack[cardNumTwo].classList.toggle("rotateCard0");
 				cardNumOne = 0;
 				cardNumTwo = 0;
 				console.log("Counter should be -1 = " + counter);

@@ -4,16 +4,38 @@
 
 	flex: 0 0 20rem;
 
+	min-height: 200px;
+	margin: 3rem;
+
+	position: relative;
+
 	&__side {
-		background-color: rgb(35, 35, 35);
 		border-radius: .5rem;
 		box-shadow: 2px 2px 15px rgb(35, 35, 35);
+		width: 100%;
 		min-height: 200px;
 		margin: 3rem;
 		transition: all .8s;
+		backface-visibility: hidden;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&--front {
+			background-color: rgb(35, 35, 35);
+		}
+
+		&--back {
+			background-color: rgb(134, 29, 29);
+			transform: rotateY(180deg);
+		}
 	}
 }
 
-.rotateCard {
+.rotateCard180 {
 	transform: rotateY(180deg);
+}
+.rotateCard0 {
+	transform: rotateY(0);
 }

@@ -10,6 +10,7 @@ const cardDisplay = document.querySelectorAll(".cardDisplay");
 const cardContainer = document.querySelector(".card-container");
 const cardSideDisplayFront = document.querySelectorAll(".card__side--front");
 const cardSideDisplayBack = document.querySelectorAll(".card__side--back");
+const counterDisplay = document.querySelector(".counter--display");
 
 loadGameBtn.addEventListener("click", function() {
 	playerNameDislpay.textContent = nameInputDisplay.value;
@@ -30,6 +31,7 @@ newPlayerBtn.addEventListener("click", function() {
 });
 
 let clickCount = 0;
+let clickCounter = 0;
 let counter = 0;
 let compareCardOneText = "";
 let compareCardTwoText = "";
@@ -51,6 +53,16 @@ for (let i = 0; i < cardDisplay.length; i++)
 			console.log(cardNumOne);
 		}
 		if (counter === 1) {
+			clickCounter += counter;
+			if (clickCounter <= 9) {
+				counterDisplay.textContent = "00" + clickCounter;
+			}
+			else if (clickCounter <= 99) {
+				counterDisplay.textContent = "0" + clickCounter;
+			}
+			else {
+				counterDisplay.textContent = clickCounter;
+			}
 			compareCardTwoText = cardSideDisplayBack[i].textContent;
 			console.log(compareCardTwoText);
 			cardNumTwo = i;

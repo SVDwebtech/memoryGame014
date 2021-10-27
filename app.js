@@ -104,3 +104,30 @@ for (let i = 0; i < cardDisplay.length; i++)
 		counter++;
 		console.log("Counter is now = " + counter);
 	});
+
+/////////////////////////////////////////////////////////////
+// TIMER
+/////////////////////////////////////////////////////////////
+const minhand = document.querySelector(".minhand");
+const sechand = document.querySelector(".sechand");
+
+let minclick = 0;
+let click = 0;
+setInterval(() => {
+	click++;
+	// console.log(click);
+	if (click < 60) {
+		if (click < 10) {
+			sechand.textContent = "0" + click;
+		}
+		else {
+			sechand.textContent = click;
+		}
+	}
+	else if (click === 60) {
+		minclick++;
+		minhand.textContent = "0" + minclick;
+		sechand.textContent = "00";
+		click = 0;
+	}
+}, 1000);

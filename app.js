@@ -32,6 +32,7 @@ let compareCardOneText = "";
 let compareCardTwoText = "";
 let cardNumOne = 0;
 let cardNumTwo = 0;
+let cardCompareCounter = 5;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Load New Game Logic
@@ -39,7 +40,7 @@ loadGameBtn.addEventListener("click", function() {
 	// isGameLoaded = true;
 	// console.log(isGameLoaded);
 	// if (isGameLoaded) {
-	setInterval(() => {
+	const intervalID = setInterval(() => {
 		click++;
 		// console.log(click);
 		if (click < 60) {
@@ -57,6 +58,7 @@ loadGameBtn.addEventListener("click", function() {
 			click = 0;
 		}
 	}, 1000);
+	console.log("intervalID = " + intervalID);
 	// }
 	playerNameDislpay.textContent = nameInputDisplay.value;
 	nameInputDisplay.style.display = "none";
@@ -102,6 +104,10 @@ loadGameBtn.addEventListener("click", function() {
 						cardDisplay[cardNumOne].style.visibility = "hidden";
 						cardDisplay[cardNumTwo].style.visibility = "hidden";
 					}, 1000);
+					cardCompareCounter--;
+					if (cardCompareCounter === 0) {
+						clearInterval(intervalID);
+					}
 				}
 
 				setTimeout(function() {

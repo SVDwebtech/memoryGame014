@@ -33,16 +33,104 @@ let compareCardTwoText = "";
 let cardNumOne = 0;
 let cardNumTwo = 0;
 let cardCompareCounter = 5;
+let intervalID;
+let cardFront;
+let cardBack;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Load New Game Logic
 loadGameBtn.addEventListener("click", function() {
-	// isGameLoaded = true;
-	// console.log(isGameLoaded);
-	// if (isGameLoaded) {
-	const intervalID = setInterval(() => {
+	startTimer();
+	playerNameDislpay.textContent = nameInputDisplay.value;
+	nameInputDisplay.value = "";
+	nameInputDisplay.style.display = "none";
+	gameDifficultyCheckboxes.style.display = "none";
+	loadGameBtn.style.display = "none";
+	resetAndShuffleBtn.style.display = "block";
+	newPlayerBtn.style.display = "block";
+
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	// Game Logic
+	for (let i = 0; i < cardDisplay.length; i++)
+		cardDisplay[i].addEventListener("click", function() {
+			clickCount++;
+			cardFront = cardSideDisplayFront[i];
+			cardBack = cardSideDisplayBack[i];
+			// flip card to back when clicked
+			console.log("just before rotate card: counter = " + counter);
+			rotateCard();
+
+			if (counter === 0) {
+				compareCardOneText = cardSideDisplayBack[i].textContent;
+				cardNumOne = i;
+			}
+
+			if (counter === 1) {
+				flipCounter();
+				compareCardTwoText = cardSideDisplayBack[i].textContent;
+				cardNumTwo = i;
+				// compare cards and if equal hide them
+				compareCards();
+				// flip both cards to front after compared
+				rotateBothCards();
+			}
+			counter++;
+			console.log("at end of game logic: Counter = " + counter);
+		});
+});
+
+newPlayerBtn.addEventListener("click", function() {
+	playerNameDislpay.textContent = "___enter new player name";
+	nameInputDisplay.style.display = "block";
+	gameDifficultyCheckboxes.style.display = "block";
+	loadGameBtn.style.display = "block";
+	resetAndShuffleBtn.style.display = "none";
+	newPlayerBtn.style.display = "none";
+	clearInterval(intervalID);
+	sechand.textContent = "00";
+	minhand.textContent = "00";
+	console.log("new player loaded");
+	minclick = 0;
+	console.log("minclick should be 0 = " + minclick);
+	click = 0;
+	console.log("click should be 0 = " + click);
+	clickCount = 0;
+	console.log("clickCount should be 0 = " + clickCount);
+	clickCounter = 0;
+	console.log("clickCounter should be 0 = " + clickCounter);
+	counter = 0;
+	console.log("counter should be 0 = " + counter);
+	compareCardOneText = "";
+	console.log(
+		'compareCardOneText should be "" = ' + '"' + compareCardOneText + '"'
+	);
+	compareCardTwoText = "";
+	console.log(
+		'compareCardTwoText should be "" = ' + '"' + compareCardTwoText + '"'
+	);
+	cardNumOne = 0;
+	console.log("cardNumOne should be 0 = " + cardNumOne);
+	cardNumTwo = 0;
+	console.log("cardNumTwo should be 0 = " + cardNumTwo);
+	cardCompareCounter = 5;
+	console.log("cardCompareCounter should be 5 = " + cardCompareCounter);
+	for (let i = 0; i < cardDisplay.length; i++) {
+		cardDisplay[i].style.visibility = "visible";
+		cardSideDisplayFront[i].classList.remove("rotateCard180");
+		cardSideDisplayBack[i].classList.remove("rotateCard0");
+		cardSideDisplayBack[i].classList.add("rotateCard180");
+	}
+	counterDisplay.textContent = "000";
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Game Functions
+
+// Start Timer Function
+function startTimer() {
+	intervalID = setInterval(() => {
 		click++;
-		// console.log(click);
+
 		if (click < 60) {
 			if (click < 10) {
 				sechand.textContent = "0" + click;
@@ -58,111 +146,63 @@ loadGameBtn.addEventListener("click", function() {
 			click = 0;
 		}
 	}, 1000);
-	console.log("intervalID = " + intervalID);
-	// }
-	playerNameDislpay.textContent = nameInputDisplay.value;
-	nameInputDisplay.style.display = "none";
-	gameDifficultyCheckboxes.style.display = "none";
-	loadGameBtn.style.display = "none";
-	resetAndShuffleBtn.style.display = "block";
-	newPlayerBtn.style.display = "block";
+}
 
-	///////////////////////////////////////////////////////////////////////////////////////////////
-	// Game Logic
-	for (let i = 0; i < cardDisplay.length; i++)
-		cardDisplay[i].addEventListener("click", function() {
-			clickCount++;
-			console.log("clickCount = " + clickCount);
-			if (counter <= 1) {
-				// cardSideDisplay[i].style.backgroundColor = "red";
-				cardSideDisplayFront[i].classList.toggle("rotateCard180");
-				cardSideDisplayBack[i].classList.toggle("rotateCard0");
-			}
-			if (counter === 0) {
-				compareCardOneText = cardSideDisplayBack[i].textContent;
-				console.log(compareCardOneText);
-				cardNumOne = i;
-				console.log(cardNumOne);
-			}
-			if (counter === 1) {
-				clickCounter += counter;
-				if (clickCounter <= 9) {
-					counterDisplay.textContent = "00" + clickCounter;
-				}
-				else if (clickCounter <= 99) {
-					counterDisplay.textContent = "0" + clickCounter;
-				}
-				else {
-					counterDisplay.textContent = clickCounter;
-				}
-				compareCardTwoText = cardSideDisplayBack[i].textContent;
-				console.log(compareCardTwoText);
-				cardNumTwo = i;
-				console.log(cardNumTwo);
-				if (compareCardOneText === compareCardTwoText) {
-					setTimeout(function() {
-						cardDisplay[cardNumOne].style.visibility = "hidden";
-						cardDisplay[cardNumTwo].style.visibility = "hidden";
-					}, 1000);
-					cardCompareCounter--;
-					if (cardCompareCounter === 0) {
-						clearInterval(intervalID);
-					}
-				}
+// Stop Timer Function
+function stopTimer() {
+	cardCompareCounter--;
+	if (cardCompareCounter === 0) {
+		clearInterval(intervalID);
+	}
+}
 
-				setTimeout(function() {
-					counter = 0;
-					compareCardOneText = "";
-					compareCardTwoText = "";
-					// cardSideDisplay[cardNumOne].style.backgroundColor =
-					// 	"rgb(35, 35, 35)";
-					// cardSideDisplay[cardNumTwo].style.backgroundColor =
-					// 	"rgb(35, 35, 35)";
-					cardSideDisplayFront[cardNumOne].classList.toggle(
-						"rotateCard180"
-					);
-					cardSideDisplayBack[cardNumOne].classList.toggle(
-						"rotateCard0"
-					);
-					cardSideDisplayFront[cardNumTwo].classList.toggle(
-						"rotateCard180"
-					);
-					cardSideDisplayBack[cardNumTwo].classList.toggle(
-						"rotateCard0"
-					);
-					cardNumOne = 0;
-					cardNumTwo = 0;
-					console.log("Counter should be -1 = " + counter);
-					console.log(
-						"CompareCardOneText should be empty = " +
-							'"' +
-							compareCardOneText +
-							'"'
-					);
-					console.log(
-						"CompareCardTwoText should be empty = " +
-							'"' +
-							compareCardTwoText +
-							'"'
-					);
-					console.log(
-						"CardNumOne should be empty = " + '"' + cardNumOne + '"'
-					);
-					console.log(
-						"CardNumTwo should be empty = " + '"' + cardNumTwo + '"'
-					);
-				}, 2000);
-			}
-			counter++;
-			console.log("Counter is now = " + counter);
-		});
-});
+//Rotate Card Function
+function rotateCard() {
+	// rotate card when clicked
+	if (counter <= 1) {
+		cardFront.classList.toggle("rotateCard180");
+		cardBack.classList.toggle("rotateCard0");
+	}
+}
 
-newPlayerBtn.addEventListener("click", function() {
-	playerNameDislpay.textContent = "___enter new player name";
-	nameInputDisplay.style.display = "block";
-	gameDifficultyCheckboxes.style.display = "block";
-	loadGameBtn.style.display = "block";
-	resetAndShuffleBtn.style.display = "none";
-	newPlayerBtn.style.display = "none";
-});
+// Rotate Both Cards Function
+function rotateBothCards() {
+	setTimeout(function() {
+		counter = 0;
+		compareCardOneText = "";
+		compareCardTwoText = "";
+
+		cardSideDisplayFront[cardNumOne].classList.toggle("rotateCard180");
+		cardSideDisplayBack[cardNumOne].classList.toggle("rotateCard0");
+		cardSideDisplayFront[cardNumTwo].classList.toggle("rotateCard180");
+		cardSideDisplayBack[cardNumTwo].classList.toggle("rotateCard0");
+		cardNumOne = 0;
+		cardNumTwo = 0;
+	}, 2000);
+}
+
+// Start Flip Counter Function
+function flipCounter() {
+	clickCounter += counter;
+	if (clickCounter <= 9) {
+		counterDisplay.textContent = "00" + clickCounter;
+	}
+	else if (clickCounter <= 99) {
+		counterDisplay.textContent = "0" + clickCounter;
+	}
+	else {
+		counterDisplay.textContent = clickCounter;
+	}
+}
+
+// Compare Cards Function
+function compareCards() {
+	if (compareCardOneText === compareCardTwoText) {
+		setTimeout(function() {
+			cardDisplay[cardNumOne].style.visibility = "hidden";
+			cardDisplay[cardNumTwo].style.visibility = "hidden";
+		}, 1000);
+		// stop the timer if there's no other cards to flip
+		stopTimer();
+	}
+}

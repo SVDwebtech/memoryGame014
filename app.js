@@ -15,8 +15,7 @@ const sechand = document.querySelector(".sechand");
 
 // game button variables
 const loadGameBtn = document.querySelector(".loadGameBtn");
-const resetAndShuffleBtn = document.querySelector(".resetAndShuffleBtn");
-const newPlayerBtn = document.querySelector(".newPlayerBtn");
+const newGameBtn = document.querySelector(".newGameBtn");
 
 // card display variables
 const cardDisplay = document.querySelectorAll(".cardDisplay");
@@ -46,60 +45,23 @@ let cardPairsHiddenCounter = 5;
 let cardFront;
 let cardBack;
 
+// game loaded variables
+let isGameStarted = false;
+
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// Load New Game Logic
+// Game Logic
+
 loadGameBtn.addEventListener("click", gameLogic);
-
-newPlayerBtn.addEventListener("click", function() {
-	playerNameDislpay.textContent = "___enter new player name";
-	nameInputDisplay.style.display = "block";
-	gameDifficultyCheckboxes.style.display = "block";
-	loadGameBtn.style.display = "block";
-	resetAndShuffleBtn.style.display = "none";
-	newPlayerBtn.style.display = "none";
-	clearInterval(intervalID);
-	sechand.textContent = "00";
-	minhand.textContent = "00";
-	console.log("new player loaded");
-	minclick = 0;
-	console.log("minclick should be 0 = " + minclick);
-	click = 0;
-	console.log("click should be 0 = " + click);
-	clickCount = 0;
-	console.log("clickCount should be 0 = " + clickCount);
-	clickCounter = 0;
-	console.log("clickCounter should be 0 = " + clickCounter);
-	counter = 0;
-	console.log("counter should be 0 = " + counter);
-	compareCardOneText = "";
-	console.log(
-		'compareCardOneText should be "" = ' + '"' + compareCardOneText + '"'
-	);
-	compareCardTwoText = "";
-	console.log(
-		'compareCardTwoText should be "" = ' + '"' + compareCardTwoText + '"'
-	);
-	cardNumOne = 0;
-	console.log("cardNumOne should be 0 = " + cardNumOne);
-	cardNumTwo = 0;
-	console.log("cardNumTwo should be 0 = " + cardNumTwo);
-	cardCompareCounter = 5;
-	console.log("cardCompareCounter should be 5 = " + cardCompareCounter);
-	for (let i = 0; i < cardDisplay.length; i++) {
-		cardDisplay[i].style.visibility = "visible";
-		cardSideDisplayFront[i].classList.remove("rotateCard180");
-		cardSideDisplayBack[i].classList.remove("rotateCard0");
-		cardSideDisplayBack[i].classList.add("rotateCard180");
-	}
-	counterDisplay.textContent = "000";
-});
-
-//newPlayerBtn.removeEventListener("click", gameLogic);
+loadGameBtn.addEventListener("click", cardClick);
+newGameBtn.addEventListener("click", function() {});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Game Functions
 
-// Game Logic
+// Card Rotate and Compare Function
+// function cardRotateAndCompareLogic() {}
+
+// Game Logic Function
 function gameLogic() {
 	console.log("loadGameBtn clicked");
 	// start timer display
@@ -112,13 +74,18 @@ function gameLogic() {
 	nameInputDisplay.style.display = "none";
 	gameDifficultyCheckboxes.style.display = "none";
 	loadGameBtn.style.display = "none";
-	resetAndShuffleBtn.style.display = "block";
-	newPlayerBtn.style.display = "block";
+	newGameBtn.style.display = "block";
 
-	// add click listener to each card
-	console.log("eventlistener added to each card");
+	isGameStarted = true;
+}
+
+// card click function
+
+function cardClick() {
 	for (let i = 0; i < cardDisplay.length; i++) {
-		cardDisplay[i].addEventListener("click", function() {
+		let cardRotateAndCompareLogic = function() {
+			// add click listener to each card
+			console.log("eventlistener added to each card");
 			clickCount++;
 			cardFront = cardSideDisplayFront[i];
 			cardBack = cardSideDisplayBack[i];
@@ -146,7 +113,8 @@ function gameLogic() {
 			}
 			counter++;
 			console.log("at end of game logic: Counter = " + counter);
-		});
+		};
+		cardDisplay[i].addEventListener("click", cardRotateAndCompareLogic);
 	}
 }
 

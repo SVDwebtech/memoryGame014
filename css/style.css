@@ -157,7 +157,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.header .gameInfo__playerInfo, .header .gameInfo__gameSettings, .header .gameInfo__gameWinners {
+.header .gameInfo__playerInfo, .header .gameInfo__gameSettings {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,14 +167,14 @@ body {
   padding: 2rem;
   margin: 2rem;
 }
-.header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem, .header .gameInfo__gameWinners--infoItem {
+.header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem {
   margin: 0.5rem;
 }
-.header .gameInfo__playerInfo--checkboxItem, .header .gameInfo__gameSettings--checkboxItem, .header .gameInfo__gameWinners--checkboxItem {
+.header .gameInfo__playerInfo--checkboxItem, .header .gameInfo__gameSettings--checkboxItem {
   display: inline-block;
   margin: 0.75rem;
 }
-.header .gameInfo__playerInfo--winnerItem, .header .gameInfo__gameSettings--winnerItem, .header .gameInfo__gameWinners--winnerItem {
+.header .gameInfo__playerInfo--winnerItem, .header .gameInfo__gameSettings--winnerItem {
   margin: 0.5rem;
 }
 

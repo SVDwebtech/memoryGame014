@@ -8,8 +8,7 @@
 		justify-content: space-evenly;
 
 		&__playerInfo,
-		&__gameSettings,
-		&__gameWinners {
+		&__gameSettings {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -35,9 +34,5 @@
 				margin: .5rem;
 			}
 		}
-
-		// &__gameSettings {
-		// 	flex-direction: row;
-		// }
 	}
 }

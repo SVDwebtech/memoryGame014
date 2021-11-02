@@ -174,8 +174,5 @@ body {
   display: inline-block;
   margin: 0.75rem;
 }
-.header .gameInfo__playerInfo--winnerItem, .header .gameInfo__gameSettings--winnerItem {
-  margin: 0.5rem;
-}
 
 /*# sourceMappingURL=style.css.map */

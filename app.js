@@ -6,6 +6,9 @@ const nameInputDisplay = document.querySelector(".nameInputDisplay");
 const gameDifficultyCheckboxes = document.querySelector(
 	".gameDifficultyCheckboxes"
 );
+const checkboxEasy = document.querySelector(".checkboxEasy");
+const checkboxMedium = document.querySelector(".checkboxMedium");
+const checkboxHard = document.querySelector(".checkboxHard");
 
 // player info display variables
 const playerNameDislpay = document.querySelector(".playerNameDisplay");
@@ -54,6 +57,37 @@ let isGameStarted = false;
 loadGameBtn.addEventListener("click", gameLogic);
 loadGameBtn.addEventListener("click", cardClick);
 newGameBtn.addEventListener("click", function() {});
+
+loadGameBtn.addEventListener("click", checkCheckbox);
+function checkCheckbox() {
+	if (checkboxEasy.checked) {
+		let newCardsMedium = "";
+		for (let i = 1; i < 11; i++) {
+			newCardsMedium +=
+				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
+		}
+
+		cardContainer.innerHTML = newCardsMedium;
+	}
+	else if (checkboxMedium.checked) {
+		let newCardsMedium = "";
+		for (let i = 1; i < 31; i++) {
+			newCardsMedium +=
+				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
+		}
+
+		cardContainer.innerHTML = newCardsMedium;
+	}
+	else {
+		let newCardsMedium = "";
+		for (let i = 1; i < 101; i++) {
+			newCardsMedium +=
+				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
+		}
+
+		cardContainer.innerHTML = newCardsMedium;
+	}
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Game Functions

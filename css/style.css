@@ -98,6 +98,10 @@ body {
   margin-bottom: 2.55rem;
 }
 
+.u-margin-medium-div-bottom {
+  margin-bottom: 1rem;
+}
+
 .btn {
   margin: 1rem;
 }
@@ -108,8 +112,8 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  flex: 0 0 20rem;
-  min-height: 200px;
+  flex: 0 0 10rem;
+  min-height: 100px;
   margin: 3rem;
   position: relative;
 }
@@ -117,7 +121,7 @@ body {
   border-radius: 0.5rem;
   box-shadow: 2px 2px 15px #232323;
   width: 100%;
-  min-height: 200px;
+  min-height: 100px;
   margin: 3rem;
   transition: all 0.8s;
   backface-visibility: hidden;
@@ -151,7 +155,7 @@ body {
 .header {
   text-align: center;
   background-color: #232323;
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 .header .gameInfo {
   display: flex;
@@ -159,13 +163,13 @@ body {
 }
 .header .gameInfo__playerInfo, .header .gameInfo__gameSettings {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   border-radius: 0.5rem;
   background-color: #a3ffe0;
   box-shadow: 2px 2px 15px black;
-  padding: 2rem;
-  margin: 2rem;
+  padding: 1rem 3rem;
+  margin: 1rem;
 }
 .header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem {
   margin: 0.5rem;

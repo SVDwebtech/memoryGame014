@@ -1,7 +1,7 @@
 .header {
 	text-align: center;
 	background-color: rgb(35, 35, 35);
-	padding: 2.5rem;
+	padding: 1.5rem;
 
 	.gameInfo {
 		display: flex;
@@ -10,7 +10,7 @@
 		&__playerInfo,
 		&__gameSettings {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: center;
 
 			border-radius: .5rem;
@@ -18,8 +18,8 @@
 			// background-color: whitesmoke;
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
 
-			padding: 2rem;
-			margin: 2rem;
+			padding: 1rem 3rem;
+			margin: 1rem;
 
 			&--infoItem {
 				margin: .5rem;

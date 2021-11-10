@@ -2,9 +2,9 @@
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 
-	flex: 0 0 20rem;
+	flex: 0 0 10rem;
 
-	min-height: 200px;
+	min-height: 100px;
 	margin: 3rem;
 
 	position: relative;
@@ -13,7 +13,7 @@
 		border-radius: .5rem;
 		box-shadow: 2px 2px 15px rgb(35, 35, 35);
 		width: 100%;
-		min-height: 200px;
+		min-height: 100px;
 		margin: 3rem;
 		transition: all .8s;
 		backface-visibility: hidden;

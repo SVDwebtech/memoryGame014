@@ -8,26 +8,44 @@
     <title>Memory Game</title>
 </head>
 <body>
+    
     <header class="header">
-        <div class="heading-primary u-margin-medium-div-bottom">
-            <h1 class="heading-primary--main">The ultimate memory card game</h1>
-            <p class="heading-primary--sub">....Have some fun while you challenge your memory muscles!....</p>
-        </div>
-        
+                
         <div class="gameInfo">
+            
             <div class="gameInfo__playerInfo">
+                
                 <h2>Player Info:</h2>
+                
                 <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem playerNameDisplay">____enter new player name</p>
+                
                 <p class="gameInfo__playerInfo--time gameInfo__playerInfo--infoItem"> 
+                    
                     <span class="timer">
                         <span class="timer--min minhand">00</span>m:<span class="timer--sec sechand">00</span>s
                     </span>
+
                 </p>
-                <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem"><span class="counter--display">000</span></p>
+                
+                <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem">
+                    
+                    <span class="counter--display">000</span>
+                    
+                </p>
+
             </div>
+            
+            <div class="gameInfo__gameHeading heading-primary u-margin-medium-div-bottom">
+                <h1 class="heading-primary--main">The ultimate memory card game</h1>
+                <p class="heading-primary--sub">....Have some fun while you challenge your memory muscles!....</p>
+            </div>
+            
             <div class="gameInfo__gameSettings">
+                
                 <h2>Game Settings:</h2>
+                
                 <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem nameInputDisplay" type="text" name="" id="" placeholder="Enter your name">
+                
                 <div class="gameinfo__gameSettings--gamedifficulty gameDifficultyCheckboxes">
                     <div class="gameInfo__gameSettings--easy gameInfo__gameSettings--checkboxItem checkboxDiv">
                         <input class="checkboxInput checkboxEasy" type="radio" id="easy" name="gameDifficulty" checked>
@@ -42,12 +60,16 @@
                         <label for="hard">Hard</label>
                     </div>
                 </div>
+                
                 <div class="buttons">
                     <button class="btn btn__loadGame loadGameBtn">Load Game</button>
                     <a href="http://127.0.0.1:8080/"><div class="btn btn__display btn__newGame newGameBtn">New Game</div></a> 
                 </div>
+
             </div>   
+
         </div>
+
     </header>
     <main>
         <div class="card-container">

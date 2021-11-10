@@ -112,16 +112,16 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  flex: 0 0 10rem;
-  min-height: 100px;
-  margin: 3rem;
+  flex: 0 0 6rem;
+  min-height: 80px;
+  margin: 1.5rem;
   position: relative;
 }
 .card__side {
   border-radius: 0.5rem;
   box-shadow: 2px 2px 15px #232323;
   width: 100%;
-  min-height: 100px;
+  min-height: 80px;
   margin: 3rem;
   transition: all 0.8s;
   backface-visibility: hidden;

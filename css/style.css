@@ -171,8 +171,11 @@ body {
   padding: 1rem 3rem;
   margin: 1rem;
 }
+.header .gameInfo__playerInfo--divs, .header .gameInfo__gameSettings--divs {
+  margin: 0 1rem;
+}
 .header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem {
-  margin: 0.5rem;
+  margin: 0.05rem 0.5rem;
 }
 .header .gameInfo__playerInfo--checkboxItem, .header .gameInfo__gameSettings--checkboxItem {
   display: inline-block;

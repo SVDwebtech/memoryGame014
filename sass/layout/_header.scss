@@ -21,8 +21,12 @@
 			padding: 1rem 3rem;
 			margin: 1rem;
 
+			&--divs {
+				margin: 0 1rem;
+			}
+
 			&--infoItem {
-				margin: .5rem;
+				margin: .05rem .5rem;
 			}
 
 			&--checkboxItem {

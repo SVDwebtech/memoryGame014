@@ -18,6 +18,7 @@ const sechand = document.querySelector(".sechand");
 
 // game button variables
 const loadGameBtn = document.querySelector(".loadGameBtn");
+const startGameBtn = document.querySelector(".startGameBtn");
 const newGameBtn = document.querySelector(".newGameBtn");
 
 // card display variables
@@ -52,9 +53,10 @@ let cardBack;
 let isGameStarted = false;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// Load Player Info and Board Difficulty
+// Game Difficulty And Load Player Info
 
 loadGameBtn.addEventListener("click", checkCheckbox);
+// Game Difficulty Checkbox Function
 function checkCheckbox() {
 	if (checkboxEasy.checked) {
 		let newCardsMedium = "";
@@ -83,6 +85,16 @@ function checkCheckbox() {
 
 		cardContainer.innerHTML = newCardsMedium;
 	}
+
+	// capture name and reset input value
+	playerNameDislpay.textContent = nameInputDisplay.value;
+	nameInputDisplay.value = "";
+
+	// hide name input and gamedifficulty settings and display other game buttons
+	nameInputDisplay.style.display = "none";
+	gameDifficultyCheckboxes.style.display = "none";
+	loadGameBtn.style.display = "none";
+	startGameBtn.style.display = "block";
 }
 
 // loadGameBtn.addEventListener("click", gameLogic);
@@ -99,14 +111,8 @@ function checkCheckbox() {
 // 	// start timer display
 // 	startTimer();
 // 	console.log("player name captured and display other buttons");
-// 	// capture name and reset input value
-// 	playerNameDislpay.textContent = nameInputDisplay.value;
-// 	nameInputDisplay.value = "";
-// 	// hide name input and gamedifficulty settings and display other game buttons
-// 	nameInputDisplay.style.display = "none";
-// 	gameDifficultyCheckboxes.style.display = "none";
-// 	loadGameBtn.style.display = "none";
-// 	newGameBtn.style.display = "block";
+
+//
 
 // 	isGameStarted = true;
 // }

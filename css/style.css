@@ -152,6 +152,12 @@ body {
   padding: 2.5rem 10rem;
 }
 
+.footer {
+  text-align: center;
+  background-color: #232323;
+  padding: 1.5rem;
+}
+
 .header {
   text-align: center;
   background-color: #232323;

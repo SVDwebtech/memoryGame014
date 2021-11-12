@@ -97,10 +97,49 @@ function checkCheckbox() {
 	startGameBtn.style.display = "block";
 }
 
-// loadGameBtn.addEventListener("click", gameLogic);
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Start Timer and Load Card Flip Functionality
+
+startGameBtn.addEventListener("click", startTimerAndCardFlip);
+
+function startTimerAndCardFlip() {
+	startTimer();
+}
+
+// Start Timer Function
+function startTimer() {
+	console.log("timer started");
+	intervalID = setInterval(() => {
+		click++;
+
+		if (click < 60) {
+			if (click < 10) {
+				sechand.textContent = "0" + click;
+			}
+			else {
+				sechand.textContent = click;
+			}
+		}
+		else if (click === 60) {
+			minclick++;
+			minhand.textContent = "0" + minclick;
+			sechand.textContent = "00";
+			click = 0;
+		}
+	}, 1000);
+}
+
+// Stop Timer Function
+function stopTimer() {
+	cardPairsHiddenCounter--;
+	if (cardPairsHiddenCounter === 0) {
+		clearInterval(intervalID);
+	}
+}
+
 // loadGameBtn.addEventListener("click", cardClick);
-// //////////////////////////////////////////////////////////////////////////////////////////////////
-// // Game Functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Game Functions
 
 // // Card Rotate and Compare Function
 // // function cardRotateAndCompareLogic() {}
@@ -153,37 +192,6 @@ function checkCheckbox() {
 // 			console.log("at end of game logic: Counter = " + counter);
 // 		};
 // 		cardDisplay[i].addEventListener("click", cardRotateAndCompareLogic);
-// 	}
-// }
-
-// // Start Timer Function
-// function startTimer() {
-// 	console.log("timer started");
-// 	intervalID = setInterval(() => {
-// 		click++;
-
-// 		if (click < 60) {
-// 			if (click < 10) {
-// 				sechand.textContent = "0" + click;
-// 			}
-// 			else {
-// 				sechand.textContent = click;
-// 			}
-// 		}
-// 		else if (click === 60) {
-// 			minclick++;
-// 			minhand.textContent = "0" + minclick;
-// 			sechand.textContent = "00";
-// 			click = 0;
-// 		}
-// 	}, 1000);
-// }
-
-// // Stop Timer Function
-// function stopTimer() {
-// 	cardPairsHiddenCounter--;
-// 	if (cardPairsHiddenCounter === 0) {
-// 		clearInterval(intervalID);
 // 	}
 // }
 

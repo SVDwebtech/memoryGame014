@@ -24,6 +24,9 @@ const newGameBtn = document.querySelector(".newGameBtn");
 // card display variables
 const cardDisplay = document.querySelectorAll(".cardDisplay");
 const cardContainer = document.querySelector(".card-container");
+const cardContainerTwenty = document.querySelector(".card-container-twenty");
+const cardContainerForty = document.querySelector(".card-container-forty");
+const cardContainerSixty = document.querySelector(".card-container-sixty");
 const cardSideDisplayFront = document.querySelectorAll(".card__side--front");
 const cardSideDisplayBack = document.querySelectorAll(".card__side--back");
 
@@ -55,35 +58,21 @@ let isGameStarted = false;
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Game Difficulty And Load Player Info
 
+cardContainerTwenty.classList.toggle("display-none");
+cardContainerForty.classList.toggle("display-none");
+cardContainerSixty.classList.toggle("display-none");
+
 loadGameBtn.addEventListener("click", checkCheckbox);
 // Game Difficulty Checkbox Function
 function checkCheckbox() {
 	if (checkboxEasy.checked) {
-		let newCardsMedium = "";
-		for (let i = 1; i < 11; i++) {
-			newCardsMedium +=
-				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
-		}
-
-		cardContainer.innerHTML = newCardsMedium;
+		cardContainerTwenty.classList.toggle("display-none");
 	}
 	else if (checkboxMedium.checked) {
-		let newCardsMedium = "";
-		for (let i = 1; i < 31; i++) {
-			newCardsMedium +=
-				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
-		}
-
-		cardContainer.innerHTML = newCardsMedium;
+		cardContainerForty.classList.toggle("display-none");
 	}
 	else {
-		let newCardsMedium = "";
-		for (let i = 1; i < 101; i++) {
-			newCardsMedium +=
-				'<div class="card card__card1 cardDisplay"><div class="card__side card__side--front">Front</div><div class="card__side card__side--back">1</div></div>';
-		}
-
-		cardContainer.innerHTML = newCardsMedium;
+		cardContainerSixty.classList.toggle("display-none");
 	}
 
 	// capture name and reset input value
@@ -104,6 +93,7 @@ startGameBtn.addEventListener("click", startTimerAndCardFlip);
 
 function startTimerAndCardFlip() {
 	startTimer();
+	cardClick();
 }
 
 // Start Timer Function
@@ -137,6 +127,61 @@ function stopTimer() {
 	}
 }
 
+// card click function
+function cardClick() {
+	for (let i = 0; i < cardDisplay.length; i++) {
+		cardDisplay[i].addEventListener("click", function() {
+			// cardDisplay[i].style.backgroundColor = "red";
+			cardFront = cardSideDisplayFront[i];
+			cardBack = cardSideDisplayBack[i];
+			cardFront.classList.toggle("rotateCard180");
+			cardBack.classList.toggle("rotateCard0");
+		});
+
+		// 		let cardRotateAndCompareLogic = function() {
+		// 			// add click listener to each card
+		// 			console.log("eventlistener added to each card");
+		// 			clickCount++;
+		// 			cardFront = cardSideDisplayFront[i];
+		// 			cardBack = cardSideDisplayBack[i];
+		// 			// flip card to back when clicked
+		// 			console.log("just before rotate card: counter = " + counter);
+		// 			// rotate card to back when clicked
+		// 			console.log("rotate card to back");
+		// 			rotateCard();
+
+		// 			if (counter === 0) {
+		// 				compareCardOneText = cardSideDisplayBack[i].textContent;
+		// 				cardNumOne = i;
+		// 			}
+
+		// 			if (counter === 1) {
+		// 				flipCounter();
+		// 				compareCardTwoText = cardSideDisplayBack[i].textContent;
+		// 				cardNumTwo = i;
+		// 				// compare cards and if equal hide them
+		// 				console.log("compare the pair of cards");
+		// 				compareCards();
+		// 				// rotate both cards to front after compared
+		// 				console.log("rotate the pair of cards to front");
+		// 				rotateBothCards();
+		// 			}
+		// 			counter++;
+		// 			console.log("at end of game logic: Counter = " + counter);
+		// 		};
+		// 		cardDisplay[i].addEventListener("click", cardRotateAndCompareLogic);
+	}
+}
+
+//Rotate Card Function
+function rotateCard() {
+	// rotate card when clicked
+	// if (counter <= 1) {
+	cardFront.classList.toggle("rotateCard180");
+	cardBack.classList.toggle("rotateCard0");
+	// }
+}
+
 // loadGameBtn.addEventListener("click", cardClick);
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Game Functions
@@ -154,54 +199,6 @@ function stopTimer() {
 //
 
 // 	isGameStarted = true;
-// }
-
-// // card click function
-
-// function cardClick() {
-// 	for (let i = 0; i < cardDisplay.length; i++) {
-// 		let cardRotateAndCompareLogic = function() {
-// 			// add click listener to each card
-// 			console.log("eventlistener added to each card");
-// 			clickCount++;
-// 			cardFront = cardSideDisplayFront[i];
-// 			cardBack = cardSideDisplayBack[i];
-// 			// flip card to back when clicked
-// 			console.log("just before rotate card: counter = " + counter);
-// 			// rotate card to back when clicked
-// 			console.log("rotate card to back");
-// 			rotateCard();
-
-// 			if (counter === 0) {
-// 				compareCardOneText = cardSideDisplayBack[i].textContent;
-// 				cardNumOne = i;
-// 			}
-
-// 			if (counter === 1) {
-// 				flipCounter();
-// 				compareCardTwoText = cardSideDisplayBack[i].textContent;
-// 				cardNumTwo = i;
-// 				// compare cards and if equal hide them
-// 				console.log("compare the pair of cards");
-// 				compareCards();
-// 				// rotate both cards to front after compared
-// 				console.log("rotate the pair of cards to front");
-// 				rotateBothCards();
-// 			}
-// 			counter++;
-// 			console.log("at end of game logic: Counter = " + counter);
-// 		};
-// 		cardDisplay[i].addEventListener("click", cardRotateAndCompareLogic);
-// 	}
-// }
-
-// //Rotate Card Function
-// function rotateCard() {
-// 	// rotate card when clicked
-// 	if (counter <= 1) {
-// 		cardFront.classList.toggle("rotateCard180");
-// 		cardBack.classList.toggle("rotateCard0");
-// 	}
 // }
 
 // // Rotate Both Cards Function

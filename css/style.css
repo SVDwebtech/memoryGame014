@@ -151,6 +151,10 @@ body {
   padding: 2.5rem 10rem;
 }
 
+.display-none {
+  display: none;
+}
+
 .footer {
   text-align: center;
   background-color: #232323;

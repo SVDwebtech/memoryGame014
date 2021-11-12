@@ -98,6 +98,8 @@ startGameBtn.addEventListener("click", startTimerAndCardFlip);
 function startTimerAndCardFlip() {
 	startTimer();
 	cardClick();
+	startGameBtn.style.display = "none";
+	newGameBtn.style.display = "block";
 }
 
 // Start Timer Function

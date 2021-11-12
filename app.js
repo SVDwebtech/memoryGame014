@@ -49,7 +49,7 @@ let compareCardOneText = "";
 let compareCardTwoText = "";
 let cardNumOne = 0;
 let cardNumTwo = 0;
-let cardPairsHiddenCounter = 5;
+let cardPairsHiddenCounter;
 let cardFront;
 let cardBack;
 
@@ -68,12 +68,15 @@ loadGameBtn.addEventListener("click", checkCheckbox);
 function checkCheckbox() {
 	if (checkboxEasy.checked) {
 		cardContainerTwenty.classList.toggle("display-none");
+		cardPairsHiddenCounter = 10;
 	}
 	else if (checkboxMedium.checked) {
 		cardContainerForty.classList.toggle("display-none");
+		cardPairsHiddenCounter = 20;
 	}
 	else {
 		cardContainerSixty.classList.toggle("display-none");
+		cardPairsHiddenCounter = 30;
 	}
 
 	// capture name and reset input value
@@ -121,14 +124,13 @@ function startTimer() {
 }
 
 // Stop Timer Function
-function stopTimer() {
-	cardPairsHiddenCounter--;
+function shouldTimerStop() {
 	if (cardPairsHiddenCounter === 0) {
 		clearInterval(intervalID);
 	}
 }
 
-// card click function
+// Card Click function
 function cardClick() {
 	for (let i = 0; i < cardDisplay.length; i++) {
 		cardDisplay[i].addEventListener("click", function() {
@@ -154,6 +156,7 @@ function cardClick() {
 					// rotate both cards to front after compared
 					console.log("rotate the pair of cards to front");
 					rotateBothCards();
+					shouldTimerStop();
 				}
 				counter++;
 			}
@@ -186,7 +189,7 @@ function rotateBothCards() {
 	}, 2000);
 	setTimeout(function() {
 		preventRotateCounter = 0;
-	}, 2500);
+	}, 2100);
 }
 
 // Flip Counter Function
@@ -210,7 +213,6 @@ function compareCards() {
 			cardDisplay[cardNumOne].style.visibility = "hidden";
 			cardDisplay[cardNumTwo].style.visibility = "hidden";
 		}, 1000);
-		// stop the timer if there's no other cards to flip
-		stopTimer();
+		cardPairsHiddenCounter--;
 	}
 }

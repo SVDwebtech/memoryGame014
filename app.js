@@ -42,6 +42,7 @@ let intervalID;
 let clickCount = 0;
 let clickCounter = 0;
 let counter = 0;
+let preventRotateCounter = 0;
 
 // card comparisson variables
 let compareCardOneText = "";
@@ -134,25 +135,28 @@ function cardClick() {
 			clickCount++;
 			cardFront = cardSideDisplayFront[i];
 			cardBack = cardSideDisplayBack[i];
-			rotateCard();
+			if (preventRotateCounter <= 1) {
+				rotateCard();
+				preventRotateCounter++;
 
-			if (counter === 0) {
-				compareCardOneText = cardSideDisplayBack[i].textContent;
-				cardNumOne = i;
-			}
+				if (counter === 0) {
+					compareCardOneText = cardSideDisplayBack[i].textContent;
+					cardNumOne = i;
+				}
 
-			if (counter === 1) {
-				flipCounter();
-				compareCardTwoText = cardSideDisplayBack[i].textContent;
-				cardNumTwo = i;
-				// compare cards and if equal hide them
-				console.log("compare the pair of cards");
-				compareCards();
-				// rotate both cards to front after compared
-				console.log("rotate the pair of cards to front");
-				rotateBothCards();
+				if (counter === 1) {
+					flipCounter();
+					compareCardTwoText = cardSideDisplayBack[i].textContent;
+					cardNumTwo = i;
+					// compare cards and if equal hide them
+					console.log("compare the pair of cards");
+					compareCards();
+					// rotate both cards to front after compared
+					console.log("rotate the pair of cards to front");
+					rotateBothCards();
+				}
+				counter++;
 			}
-			counter++;
 		});
 	}
 }
@@ -160,7 +164,7 @@ function cardClick() {
 //Rotate Card Function
 function rotateCard() {
 	// rotate card when clicked
-	if (counter <= 1) {
+	if (counter <= 1 && preventRotateCounter <= 1) {
 		cardFront.classList.toggle("rotateCard180");
 		cardBack.classList.toggle("rotateCard0");
 	}
@@ -180,6 +184,9 @@ function rotateBothCards() {
 		cardNumOne = 0;
 		cardNumTwo = 0;
 	}, 2000);
+	setTimeout(function() {
+		preventRotateCounter = 0;
+	}, 2500);
 }
 
 // Flip Counter Function

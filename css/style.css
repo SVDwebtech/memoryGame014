@@ -122,7 +122,6 @@ body {
   box-shadow: 2px 2px 15px #232323;
   width: 100%;
   min-height: 80px;
-  margin: 3rem;
   transition: all 0.8s;
   backface-visibility: hidden;
   position: absolute;

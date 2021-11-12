@@ -138,26 +138,36 @@ function cardClick() {
 			cardFront = cardSideDisplayFront[i];
 			cardBack = cardSideDisplayBack[i];
 			if (preventRotateCounter <= 1) {
-				rotateCard();
-				preventRotateCounter++;
-
 				if (counter === 0) {
 					compareCardOneText = cardSideDisplayBack[i].textContent;
 					cardNumOne = i;
+					console.log("cardNumOne = " + cardNumOne);
+					rotateCard();
+					preventRotateCounter++;
 				}
 
 				if (counter === 1) {
-					flipCounter();
 					compareCardTwoText = cardSideDisplayBack[i].textContent;
 					cardNumTwo = i;
-					// compare cards and if equal hide them
-					console.log("compare the pair of cards");
-					compareCards();
-					// rotate both cards to front after compared
-					console.log("rotate the pair of cards to front");
-					rotateBothCards();
-					shouldTimerStop();
+					console.log("cardNumTwo = " + cardNumTwo);
+
+					if (cardNumOne === cardNumTwo) {
+						console.log("click on another card");
+						counter = 0;
+					}
+					else {
+						rotateCard();
+						preventRotateCounter++;
+						// compare cards and if equal hide them
+						console.log("compare the pair of cards");
+						compareCards();
+						// rotate both cards to front after compared
+						console.log("rotate the pair of cards to front");
+						rotateBothCards();
+						shouldTimerStop();
+					}
 				}
+
 				counter++;
 			}
 		});
@@ -186,6 +196,7 @@ function rotateBothCards() {
 		cardSideDisplayBack[cardNumTwo].classList.toggle("rotateCard0");
 		cardNumOne = 0;
 		cardNumTwo = 0;
+		flipCounter();
 	}, 2000);
 	setTimeout(function() {
 		preventRotateCounter = 0;
@@ -194,7 +205,6 @@ function rotateBothCards() {
 
 // Flip Counter Function
 function flipCounter() {
-	clickCounter += counter;
 	if (clickCounter <= 9) {
 		counterDisplay.textContent = "00" + clickCounter;
 	}
@@ -208,6 +218,7 @@ function flipCounter() {
 
 // Compare Cards Function
 function compareCards() {
+	clickCounter++;
 	if (compareCardOneText === compareCardTwoText) {
 		setTimeout(function() {
 			cardDisplay[cardNumOne].style.visibility = "hidden";

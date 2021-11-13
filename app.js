@@ -100,6 +100,42 @@ function checkCheckbox() {
 				cardSideDisplayBack[i].style.backgroundImage =
 					"url(/img/shape1.png)";
 			}
+			else if (cardSideDisplayBack[i].textContent === "2") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape2.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "3") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape3.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "4") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape4.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "5") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape5.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "6") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape6.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "7") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape7.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "8") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape8.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "9") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape9.png)";
+			}
+			else if (cardSideDisplayBack[i].textContent === "10") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape10.png)";
+			}
 		}
 	}
 	else if (checkboxMedium.checked) {

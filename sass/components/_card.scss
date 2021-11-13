@@ -27,7 +27,11 @@
 		}
 
 		&--back {
-			background-color: rgb(134, 29, 29);
+			background-color: rgb(255, 255, 255);
+			// background-image: url(/img/shape1.png);
+			background-size: 70%;
+			background-position: center;
+			background-repeat: no-repeat;
 			transform: rotateY(180deg);
 		}
 	}

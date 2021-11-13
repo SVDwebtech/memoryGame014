@@ -96,6 +96,10 @@ function checkCheckbox() {
 
 		for (let i = 0; i < arr.length; i++) {
 			cardSideDisplayBack[i].textContent = arr[i];
+			if (cardSideDisplayBack[i].textContent === "1") {
+				cardSideDisplayBack[i].style.backgroundImage =
+					"url(/img/shape1.png)";
+			}
 		}
 	}
 	else if (checkboxMedium.checked) {

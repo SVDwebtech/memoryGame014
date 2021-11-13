@@ -69,14 +69,158 @@ function checkCheckbox() {
 	if (checkboxEasy.checked) {
 		cardContainerTwenty.classList.toggle("display-none");
 		cardPairsHiddenCounter = 10;
+		const arr = [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10
+		];
+		shuffle(arr);
+		console.log(arr);
+
+		for (let i = 0; i < arr.length; i++) {
+			cardSideDisplayBack[i].textContent = arr[i];
+		}
 	}
 	else if (checkboxMedium.checked) {
 		cardContainerForty.classList.toggle("display-none");
 		cardPairsHiddenCounter = 20;
+		const arr = [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20
+		];
+		shuffle(arr);
+		console.log(arr);
+
+		for (let i = 0; i < arr.length; i++) {
+			cardSideDisplayBack[i].textContent = arr[i];
+		}
 	}
 	else {
 		cardContainerSixty.classList.toggle("display-none");
 		cardPairsHiddenCounter = 30;
+		const arr = [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14,
+			15,
+			16,
+			17,
+			18,
+			19,
+			20,
+			21,
+			22,
+			23,
+			24,
+			25,
+			26,
+			27,
+			28,
+			29,
+			30
+		];
+		shuffle(arr);
+		console.log(arr);
+
+		for (let i = 0; i < arr.length; i++) {
+			cardSideDisplayBack[i].textContent = arr[i];
+		}
 	}
 
 	// capture name and reset input value
@@ -228,4 +372,27 @@ function compareCards() {
 		}, 1000);
 		cardPairsHiddenCounter--;
 	}
+}
+
+function shuffle(array) {
+	let currentIndex = array.length,
+		randomIndex;
+
+	// While there remain elements to shuffle...
+	while (currentIndex != 0) {
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[
+			array[currentIndex],
+			array[randomIndex]
+		] = [
+			array[randomIndex],
+			array[currentIndex]
+		];
+	}
+
+	return array;
 }

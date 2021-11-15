@@ -124,5 +124,18 @@
 				}
 			}
 		}
+
+		&__requireName {
+			background-color: rgb(163, 255, 224);
+
+			width: 23rem;
+
+			// padding: 1rem;
+
+			position: absolute;
+			top: 1.5rem;
+			left: 1rem;
+			z-index: 99;
+		}
 	}
 }

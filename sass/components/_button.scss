@@ -3,7 +3,8 @@
 
 	&__loadGame,
 	&__startGame,
-	&__newGame {
+	&__newGame,
+	&__exit {
 		background-color: rgba(255, 255, 255, 0.692);
 		padding: .5rem 1rem;
 		border: 2px solid rgb(35, 35, 35);
@@ -13,7 +14,8 @@
 
 	&__loadGame:hover,
 	&__startGame:hover,
-	&__newGame:hover {
+	&__newGame:hover,
+	&__exit:hover {
 		background-color: rgba(255, 255, 255, 0.185);
 		box-shadow: 2px 2px 5px rgb(0, 0, 0);
 		transform: scale(1.05);
@@ -21,7 +23,8 @@
 
 	&__loadGame:active,
 	&__startGame:active,
-	&__newGame:active {
+	&__newGame:active,
+	&__exit:hover {
 		background-color: rgba(255, 255, 255, 0.281);
 		box-shadow: 1px 1px 0px rgb(0, 0, 0);
 		transform: scale(1);

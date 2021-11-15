@@ -146,19 +146,19 @@ body {
 .btn {
   margin: 1rem;
 }
-.btn__loadGame, .btn__startGame, .btn__newGame {
+.btn__loadGame, .btn__startGame, .btn__newGame, .btn__exit {
   background-color: rgba(255, 255, 255, 0.692);
   padding: 0.5rem 1rem;
   border: 2px solid #232323;
   box-shadow: 1px 1px 4px black;
   transition: all 0.2s;
 }
-.btn__loadGame:hover, .btn__startGame:hover, .btn__newGame:hover {
+.btn__loadGame:hover, .btn__startGame:hover, .btn__newGame:hover, .btn__exit:hover {
   background-color: rgba(255, 255, 255, 0.185);
   box-shadow: 2px 2px 5px black;
   transform: scale(1.05);
 }
-.btn__loadGame:active, .btn__startGame:active, .btn__newGame:active {
+.btn__loadGame:active, .btn__startGame:active, .btn__newGame:active, .btn__exit:hover {
   background-color: rgba(255, 255, 255, 0.281);
   box-shadow: 1px 1px 0px black;
   transform: scale(1);
@@ -341,6 +341,14 @@ body {
   display: inline-block;
   visibility: visible;
   border: 2px solid #232323;
+}
+.header .gameInfo__requireName {
+  background-color: #a3ffe0;
+  width: 23rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  z-index: 99;
 }
 
 /*# sourceMappingURL=style.css.map */

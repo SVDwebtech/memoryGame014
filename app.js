@@ -23,10 +23,12 @@ const sechand = document.querySelector(".sechand");
 const loadGameBtn = document.querySelector(".loadGameBtn");
 const startGameBtn = document.querySelector(".startGameBtn");
 const newGameBtn = document.querySelector(".newGameBtn");
+const exitBtn = document.querySelector(".exitBtn");
 
 // game pannel variables
 const playerInfoPannel = document.querySelector(".gameInfo__playerInfo");
 const gameSettingsPannel = document.querySelector(".gameInfo__gameSettings");
+const requireNamePannel = document.querySelector(".gameInfo__requireName");
 
 // card display variables
 const cardDisplay = document.querySelectorAll(".cardDisplay");
@@ -81,420 +83,428 @@ for (let i = 0; i < playerInfoItems.length; i++) {
 // Game Difficulty And Load Player Info
 
 loadGameBtn.addEventListener("click", checkCheckbox);
+exitBtn.addEventListener("click", function() {
+	requireNamePannel.style.zIndex = "99";
+});
 // Game Difficulty Checkbox Function
 function checkCheckbox() {
-	if (checkboxEasy.checked) {
-		cardContainerTwenty.classList.toggle("display-none");
-		cardPairsHiddenCounter = 10;
-		const arr = [
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10
-		];
-		shuffle(arr);
-		console.log(arr);
+	if (nameInputDisplay.value === "") {
+		requireNamePannel.style.zIndex = "300";
+	}
+	else {
+		if (checkboxEasy.checked) {
+			cardContainerTwenty.classList.toggle("display-none");
+			cardPairsHiddenCounter = 10;
+			const arr = [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			];
+			shuffle(arr);
+			console.log(arr);
 
-		for (let i = 0; i < arr.length; i++) {
-			cardSideDisplayBackTwenty[i].textContent = arr[i];
-			if (cardSideDisplayBackTwenty[i].textContent === "1") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape1.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "2") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape2.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "3") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape3.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "4") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape4.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "5") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape5.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "6") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape6.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "7") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape7.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "8") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape8.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "9") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape9.png)";
-			}
-			else if (cardSideDisplayBackTwenty[i].textContent === "10") {
-				cardSideDisplayBackTwenty[i].style.backgroundImage =
-					"url(/img/shape10.png)";
+			for (let i = 0; i < arr.length; i++) {
+				cardSideDisplayBackTwenty[i].textContent = arr[i];
+				if (cardSideDisplayBackTwenty[i].textContent === "1") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape1.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "2") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape2.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "3") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape3.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "4") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape4.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "5") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape5.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "6") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape6.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "7") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape7.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "8") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape8.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "9") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape9.png)";
+				}
+				else if (cardSideDisplayBackTwenty[i].textContent === "10") {
+					cardSideDisplayBackTwenty[i].style.backgroundImage =
+						"url(/img/shape10.png)";
+				}
 			}
 		}
-	}
-	else if (checkboxMedium.checked) {
-		cardContainerForty.classList.toggle("display-none");
-		cardPairsHiddenCounter = 20;
-		const arr2 = [
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			11,
-			12,
-			13,
-			14,
-			15,
-			16,
-			17,
-			18,
-			19,
-			20,
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			11,
-			12,
-			13,
-			14,
-			15,
-			16,
-			17,
-			18,
-			19,
-			20
-		];
-		shuffle(arr2);
-		console.log(arr2);
+		else if (checkboxMedium.checked) {
+			cardContainerForty.classList.toggle("display-none");
+			cardPairsHiddenCounter = 20;
+			const arr2 = [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			];
+			shuffle(arr2);
+			console.log(arr2);
 
-		for (let i = 0; i < arr2.length; i++) {
-			cardSideDisplayBackForty[i].textContent = arr2[i];
-			if (cardSideDisplayBackForty[i].textContent === "1") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape1.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "2") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape2.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "3") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape3.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "4") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape4.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "5") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape5.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "6") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape6.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "7") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape7.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "8") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape8.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "9") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape9.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "10") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape10.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "11") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape11.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "12") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape12.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "13") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape13.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "14") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape14.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "15") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape15.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "16") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape16.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "17") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape17.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "18") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape18.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "19") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape19.png)";
-			}
-			else if (cardSideDisplayBackForty[i].textContent === "20") {
-				cardSideDisplayBackForty[i].style.backgroundImage =
-					"url(/img/shape20.png)";
+			for (let i = 0; i < arr2.length; i++) {
+				cardSideDisplayBackForty[i].textContent = arr2[i];
+				if (cardSideDisplayBackForty[i].textContent === "1") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape1.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "2") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape2.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "3") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape3.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "4") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape4.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "5") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape5.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "6") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape6.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "7") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape7.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "8") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape8.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "9") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape9.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "10") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape10.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "11") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape11.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "12") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape12.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "13") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape13.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "14") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape14.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "15") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape15.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "16") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape16.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "17") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape17.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "18") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape18.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "19") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape19.png)";
+				}
+				else if (cardSideDisplayBackForty[i].textContent === "20") {
+					cardSideDisplayBackForty[i].style.backgroundImage =
+						"url(/img/shape20.png)";
+				}
 			}
 		}
-	}
-	else if (checkboxHard.checked) {
-		cardContainerSixty.classList.toggle("display-none");
-		cardPairsHiddenCounter = 30;
-		const arr3 = [
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			11,
-			12,
-			13,
-			14,
-			15,
-			16,
-			17,
-			18,
-			19,
-			20,
-			21,
-			22,
-			23,
-			24,
-			25,
-			26,
-			27,
-			28,
-			29,
-			30,
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10,
-			11,
-			12,
-			13,
-			14,
-			15,
-			16,
-			17,
-			18,
-			19,
-			20,
-			21,
-			22,
-			23,
-			24,
-			25,
-			26,
-			27,
-			28,
-			29,
-			30
-		];
-		shuffle(arr3);
-		console.log(arr3);
+		else if (checkboxHard.checked) {
+			cardContainerSixty.classList.toggle("display-none");
+			cardPairsHiddenCounter = 30;
+			const arr3 = [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30
+			];
+			shuffle(arr3);
+			console.log(arr3);
 
-		for (let i = 0; i < arr3.length; i++) {
-			cardSideDisplayBackSixty[i].textContent = arr3[i];
-			if (cardSideDisplayBackSixty[i].textContent === "1") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape1.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "2") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape2.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "3") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape3.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "4") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape4.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "5") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape5.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "6") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape6.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "7") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape7.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "8") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape8.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "9") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape9.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "10") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape10.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "11") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape11.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "12") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape12.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "13") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape13.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "14") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape14.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "15") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape15.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "16") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape16.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "17") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape17.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "18") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape18.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "19") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape19.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "20") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape20.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "21") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape21.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "22") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape22.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "23") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape23.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "24") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape24.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "25") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape25.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "26") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape26.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "27") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape27.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "28") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape28.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "29") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape29.png)";
-			}
-			else if (cardSideDisplayBackSixty[i].textContent === "30") {
-				cardSideDisplayBackSixty[i].style.backgroundImage =
-					"url(/img/shape30.png)";
+			for (let i = 0; i < arr3.length; i++) {
+				cardSideDisplayBackSixty[i].textContent = arr3[i];
+				if (cardSideDisplayBackSixty[i].textContent === "1") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape1.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "2") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape2.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "3") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape3.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "4") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape4.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "5") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape5.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "6") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape6.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "7") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape7.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "8") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape8.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "9") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape9.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "10") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape10.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "11") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape11.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "12") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape12.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "13") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape13.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "14") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape14.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "15") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape15.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "16") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape16.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "17") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape17.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "18") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape18.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "19") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape19.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "20") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape20.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "21") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape21.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "22") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape22.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "23") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape23.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "24") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape24.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "25") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape25.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "26") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape26.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "27") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape27.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "28") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape28.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "29") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape29.png)";
+				}
+				else if (cardSideDisplayBackSixty[i].textContent === "30") {
+					cardSideDisplayBackSixty[i].style.backgroundImage =
+						"url(/img/shape30.png)";
+				}
 			}
 		}
-	}
 
-	// capture name and reset input value
-	playerNameDislpay.textContent = nameInputDisplay.value;
-	for (let i = 0; i < playerInfoItems.length; i++) {
-		const element = playerInfoItems[i];
-		element.classList.toggle("playerInfoItemFontDisplay");
-	}
-	nameInputDisplay.value = "";
+		// capture name and reset input value
+		playerNameDislpay.textContent = nameInputDisplay.value;
+		for (let i = 0; i < playerInfoItems.length; i++) {
+			const element = playerInfoItems[i];
+			element.classList.toggle("playerInfoItemFontDisplay");
+		}
+		nameInputDisplay.value = "";
 
-	// hide name input and gamedifficulty settings and display other game buttons
-	nameInputDisplay.style.display = "none";
-	gameDifficultyCheckboxes.style.display = "none";
-	loadGameBtn.style.display = "none";
-	startGameBtn.style.display = "block";
-	playerInfoPannel.style.zIndex = "200";
-	gameSettingsPannel.style.zIndex = "100";
+		// hide name input and gamedifficulty settings and display other game buttons
+		nameInputDisplay.style.display = "none";
+		gameDifficultyCheckboxes.style.display = "none";
+		loadGameBtn.style.display = "none";
+		startGameBtn.style.display = "block";
+		playerInfoPannel.style.zIndex = "200";
+		gameSettingsPannel.style.zIndex = "100";
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////

@@ -24,6 +24,10 @@ const loadGameBtn = document.querySelector(".loadGameBtn");
 const startGameBtn = document.querySelector(".startGameBtn");
 const newGameBtn = document.querySelector(".newGameBtn");
 
+// game pannel variables
+const playerInfoPannel = document.querySelector(".gameInfo__playerInfo");
+const gameSettingsPannel = document.querySelector(".gameInfo__gameSettings");
+
 // card display variables
 const cardDisplay = document.querySelectorAll(".cardDisplay");
 const cardContainer = document.querySelector(".card-container");
@@ -489,6 +493,8 @@ function checkCheckbox() {
 	gameDifficultyCheckboxes.style.display = "none";
 	loadGameBtn.style.display = "none";
 	startGameBtn.style.display = "block";
+	playerInfoPannel.style.zIndex = "200";
+	gameSettingsPannel.style.zIndex = "100";
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////

@@ -10,77 +10,98 @@
 <body>
     
     <header class="header">
-                
-        <div class="gameInfo">
-            
-            <div class="gameInfo__playerInfo">
-                
-                <div class="gameInfo__playerInfo--divs">
-                    <p class="gameInfo__playerInfo--nameHeading">Player</p>
-                    <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem playerNameDisplay">e.g. Esna</p>
-                </div>                
-                
-                <div class="gameInfo__playerInfo--divs">
-                    <p class="gameInfo__playerInfo--nameHeading">Time</p>
-                    <p class="gameInfo__playerInfo--time gameInfo__playerInfo--infoItem"> 
-                        
-                        <span class="timer">
-                            <span class="timer--min minhand">00</span>m:<span class="timer--sec sechand">00</span>s
-                        </span>
-                    </p>
-                </div>
-                
-                <div class="gameInfo__playerInfo--divs">
-                    <p class="gameInfo__playerInfo--nameHeading">Flips</p>
-                    <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem"> 
-                        <span class="counter--display">000</span>    
-                    </p>
-                </div>
-
-                <button class="btn btn__display btn__startGame startGameBtn">Start Game</button>
-                <a href="http://127.0.0.1:8080/"><div class="btn btn__display btn__newGame newGameBtn">New Game</div></a> 
-                
-            </div>
+        
+        <div class="gameInfo">                   
             
             <div class="gameInfo__gameHeading heading-primary u-margin-medium-div-bottom">
                 
                 <h1 class="heading-primary--main">Memory card game</h1>
                 <p class="heading-primary--sub">....Have some fun while you challenge your memory muscles....</p>
+
+                <footer class="footer">
+        
+                    <p class="footer__paragraph"> 
+            
+                        <span class="footer__paragraph--introSpan">
+                            Designed and Developed by:
+                        </span> 
+            
+                        <span class="footer__paragraph--linkSpan"> 
+                            <a class="portfolioLink" href="http://www.schalkvandyk.com">
+                                Schalk van Dyk <span class="rightArrow">&RightArrow;</span> 
+                            </a>
+                        </span>
+
+                    </p>
+                </footer>
             
             </div>
             
-            <div class="gameInfo__gameSettings">
+            <div class="gameInfo__gamePannel u-margin-medium-div-bottom">
                 
-                <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem nameInputDisplay" type="text" name="" id="" placeholder="Enter your name">
-                
-                <div class="gameinfo__gameSettings--gameDifficulty gameDifficultyCheckboxes">
+                <div class="gameInfo__playerInfo">
                     
-                    <div class="gameInfo__gameSettings--easy checkboxDiv">
-                        <input class="checkboxInput checkboxEasy" type="radio" id="easy" name="gameDifficulty" checked>  
-                        <label class="gameSettingsLabel" for="easy">Easy</label>
+                    <div class="gameInfo__playerInfo--divs">
+                        <p class="gameInfo__playerInfo--nameHeading">Player</p>
+                        <p class="gameInfo__playerInfo--name gameInfo__playerInfo--infoItem playerNameDisplay">e.g. Esna</p>
+                    </div>                
+                    
+                    <div class="gameInfo__playerInfo--divs">
+                        <p class="gameInfo__playerInfo--nameHeading">Time</p>
+                        <p class="gameInfo__playerInfo--time gameInfo__playerInfo--infoItem"> 
+                            
+                            <span class="timer">
+                                <span class="timer--min minhand">00</span>m:<span class="timer--sec sechand">00</span>s
+                            </span>
+                        </p>
                     </div>
                     
-                    <div class="gameInfo__gameSettings--medium checkboxDiv">   
-                        <input class="checkboxInput checkboxMedium" type="radio" id="medium" name="gameDifficulty">
-                        <label class="gameSettingsLabel" for="medium">Medium</label>
-                    </div>
-                    
-                    <div class="gameInfo__gameSettings--hard checkboxDiv">   
-                        <input class="checkboxInput checkboxHard" type="radio" id="hard" name="gameDifficulty">
-                        <label class="gameSettingsLabel" for="hard">Hard</label>
+                    <div class="gameInfo__playerInfo--divs">
+                        <p class="gameInfo__playerInfo--nameHeading">Flips</p>
+                        <p class="gameInfo__playerInfo--flips gameInfo__playerInfo--infoItem"> 
+                            <span class="counter--display">000</span>    
+                        </p>
                     </div>
 
+                    <button class="btn btn__display btn__startGame startGameBtn">Start Game</button>
+                    <a href="http://127.0.0.1:8080/"><div class="btn btn__display btn__newGame newGameBtn">New Game</div></a> 
+                    
                 </div>
                 
-                <div class="buttons">
+                <div class="gameInfo__gameSettings">
                     
-                    <button class="btn btn__loadGame loadGameBtn">Load Game</button>
-                
-                </div>
+                    <input class="gameInfo__gameSettings--nameInput gameInfo__gameSettings--infoItem nameInputDisplay" type="text" name="" id="" placeholder="Enter your name">
+                    
+                    <div class="gameinfo__gameSettings--gameDifficulty gameDifficultyCheckboxes">
+                        
+                        <div class="gameInfo__gameSettings--easy checkboxDiv">
+                            <input class="checkboxInput checkboxEasy" type="radio" id="easy" name="gameDifficulty" checked>  
+                            <label class="gameSettingsLabel" for="easy">Easy</label>
+                        </div>
+                        
+                        <div class="gameInfo__gameSettings--medium checkboxDiv">   
+                            <input class="checkboxInput checkboxMedium" type="radio" id="medium" name="gameDifficulty">
+                            <label class="gameSettingsLabel" for="medium">Medium</label>
+                        </div>
+                        
+                        <div class="gameInfo__gameSettings--hard checkboxDiv">   
+                            <input class="checkboxInput checkboxHard" type="radio" id="hard" name="gameDifficulty">
+                            <label class="gameSettingsLabel" for="hard">Hard</label>
+                        </div>
 
-            </div>   
+                    </div>
+                    
+                    <div class="buttons">
+                        
+                        <button class="btn btn__loadGame loadGameBtn">Load Game</button>
+                    
+                    </div>
 
-        </div>
+                </div> 
+
+            </div>
+
+        </div>  
 
     </header>
     <main>
@@ -213,22 +234,6 @@
                 
     </main>
     
-    <footer class="footer">
-        
-        <p class="footer__paragraph"> 
-            
-            <span class="footer__paragraph--introSpan">
-                Designed and Developed by:
-            </span> 
-            
-            <span class="footer__paragraph--linkSpan"> 
-                <a class="portfolioLink" href="http://www.schalkvandyk.com">
-                    Schalk van Dyk <span class="rightArrow">&RightArrow;</span> 
-                </a>
-            </span>
-
-        </p>
-    </footer>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,11 +1,16 @@
 .header {
 	text-align: center;
 	background-color: rgb(35, 35, 35);
-	padding: 1.5rem;
+	padding: 1.5rem 1.5rem 0rem;
 
 	.gameInfo {
 		display: flex;
 		justify-content: space-evenly;
+
+		&__gamePannel {
+			min-width: 45%;
+			position: relative;
+		}
 
 		&__playerInfo {
 			display: flex;
@@ -18,10 +23,18 @@
 			// background-color: whitesmoke;
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
 
-			width: 25%;
+			width: 100%;
+			min-height: 13vh;
 
 			padding: 1rem 3rem;
 			margin: 1rem;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+
+			transition: all .2s;
 
 			&--divs {
 				margin: 0 1rem;
@@ -43,10 +56,18 @@
 			// background-color: whitesmoke;
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
 
-			width: 45%;
+			width: 100%;
+			min-height: 13vh;
 
 			padding: 1rem 3rem;
 			margin: 1rem;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+
+			transition: all .2s;
 
 			&--nameInput {
 				background-color: transparent;

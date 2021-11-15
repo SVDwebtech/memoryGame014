@@ -1,9 +1,7 @@
 .footer {
 	background-color: rgb(35, 35, 35);
 
-	min-height: 13vh;
-
-	padding: 1rem;
+	min-height: 10vh;
 
 	&__paragraph {
 		display: flex;
@@ -19,7 +17,7 @@
 		&--linkSpan {
 			text-align: center;
 			display: inline-block;
-			width: 22rem;
+			width: 15rem;
 
 			.portfolioLink {
 				padding: .5rem;

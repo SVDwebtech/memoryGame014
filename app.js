@@ -12,6 +12,9 @@ const checkboxHard = document.querySelector(".checkboxHard");
 
 // player info display variables
 const playerNameDislpay = document.querySelector(".playerNameDisplay");
+const playerInfoItems = document.querySelectorAll(
+	".gameInfo__playerInfo--infoItem"
+);
 const counterDisplay = document.querySelector(".counter--display");
 const minhand = document.querySelector(".minhand");
 const sechand = document.querySelector(".sechand");
@@ -64,6 +67,11 @@ let cardBack;
 
 // game loaded variables
 let isGameStarted = false;
+
+for (let i = 0; i < playerInfoItems.length; i++) {
+	const element = playerInfoItems[i];
+	element.classList.toggle("playerInfoItemFontDisplay");
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Game Difficulty And Load Player Info
@@ -470,6 +478,10 @@ function checkCheckbox() {
 
 	// capture name and reset input value
 	playerNameDislpay.textContent = nameInputDisplay.value;
+	for (let i = 0; i < playerInfoItems.length; i++) {
+		const element = playerInfoItems[i];
+		element.classList.toggle("playerInfoItemFontDisplay");
+	}
 	nameInputDisplay.value = "";
 
 	// hide name input and gamedifficulty settings and display other game buttons

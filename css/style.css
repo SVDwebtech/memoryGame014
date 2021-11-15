@@ -93,6 +93,15 @@ body {
 .gameInfo {
   color: slategray;
 }
+.gameInfo__playerInfo {
+  font-size: 1.2rem;
+}
+.gameInfo__playerInfo--infoItem {
+  font-size: 1.3rem;
+  font-family: cursive;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 
 .footer {
   color: slategray;
@@ -114,6 +123,10 @@ body {
 }
 .footer .portfolioLink:hover .rightArrow {
   color: red;
+}
+
+.playerInfoItemFontDisplay {
+  color: transparent;
 }
 
 .u-margin-large-div-bottom {

@@ -29,6 +29,18 @@ body {
 
 .gameInfo {
 	color: slategray;
+
+	&__playerInfo {
+		font-size: 1.2rem;
+
+		&--infoItem {
+			// color: transparent;
+			font-size: 1.3rem;
+			font-family: cursive;
+			font-weight: 900;
+			letter-spacing: 2px;
+		}
+	}
 }
 
 .footer {
@@ -54,4 +66,8 @@ body {
 			color: red;
 		}
 	}
+}
+
+.playerInfoItemFontDisplay {
+	color: transparent;
 }

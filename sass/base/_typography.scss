@@ -41,6 +41,15 @@ body {
 			letter-spacing: 2px;
 		}
 	}
+
+	&__gameSettings {
+		&--infoItem {
+			font-size: 1.2rem;
+		}
+		.gameSettingsLabel {
+			font-size: 1.2rem;
+		}
+	}
 }
 
 .footer {

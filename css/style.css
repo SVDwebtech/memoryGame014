@@ -102,6 +102,12 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
 }
+.gameInfo__gameSettings--infoItem {
+  font-size: 1.2rem;
+}
+.gameInfo__gameSettings .gameSettingsLabel {
+  font-size: 1.2rem;
+}
 
 .footer {
   color: slategray;
@@ -139,6 +145,23 @@ body {
 
 .btn {
   margin: 1rem;
+}
+.btn__loadGame, .btn__startGame, .btn__newGame {
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 0.5rem 1rem;
+  border: 2px solid #232323;
+  box-shadow: 1px 1px 4px black;
+  transition: all 0.2s;
+}
+.btn__loadGame:hover, .btn__startGame:hover, .btn__newGame:hover {
+  background-color: rgba(255, 255, 255, 0.185);
+  box-shadow: 2px 2px 5px black;
+  transform: scale(1.05);
+}
+.btn__loadGame:active, .btn__startGame:active, .btn__newGame:active {
+  background-color: rgba(255, 255, 255, 0.281);
+  box-shadow: 1px 1px 0px black;
+  transform: scale(1);
 }
 .btn__display {
   display: none;
@@ -227,7 +250,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.header .gameInfo__playerInfo, .header .gameInfo__gameSettings {
+.header .gameInfo__playerInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -235,19 +258,74 @@ body {
   border-radius: 0.5rem;
   background-color: #a3ffe0;
   box-shadow: 2px 2px 15px black;
-  width: 35%;
+  width: 25%;
   padding: 1rem 3rem;
   margin: 1rem;
 }
-.header .gameInfo__playerInfo--divs, .header .gameInfo__gameSettings--divs {
+.header .gameInfo__playerInfo--divs {
   margin: 0 1rem;
 }
-.header .gameInfo__playerInfo--infoItem, .header .gameInfo__gameSettings--infoItem {
+.header .gameInfo__playerInfo--infoItem {
   margin: 0.05rem 0.5rem;
 }
-.header .gameInfo__playerInfo--checkboxItem, .header .gameInfo__gameSettings--checkboxItem {
+.header .gameInfo__gameSettings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #a3ffe0;
+  box-shadow: 2px 2px 15px black;
+  width: 45%;
+  padding: 1rem 3rem;
+  margin: 1rem;
+}
+.header .gameInfo__gameSettings--nameInput {
+  background-color: transparent;
+  border: 2px solid #232323;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+.header .gameInfo__gameSettings--nameInput:focus {
+  background-color: rgba(209, 209, 209, 0.719);
+}
+.header .gameInfo__gameSettings .gameDifficultyCheckboxes {
+  display: flex;
+}
+.header .gameInfo__gameSettings .gameDifficultyCheckboxes .checkboxDiv {
+  margin-left: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .gameInfo__gameSettings .gameDifficultyCheckboxes .checkboxDiv .gameSettingsLabel {
+  margin-left: 0.5rem;
+}
+.header .gameInfo__gameSettings .gameDifficultyCheckboxes input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
   display: inline-block;
-  margin: 0.75rem;
+  visibility: visible;
+  border: 2px solid #232323;
+}
+.header .gameInfo__gameSettings .gameDifficultyCheckboxes input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #232323;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #232323;
 }
 
 /*# sourceMappingURL=style.css.map */

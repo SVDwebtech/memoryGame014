@@ -94,6 +94,28 @@ body {
   color: slategray;
 }
 
+.footer {
+  color: slategray;
+  font-size: 1.6rem;
+}
+.footer .portfolioLink {
+  color: slategray;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: slategray;
+}
+.footer .portfolioLink:hover {
+  color: slategray;
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-decoration-color: red;
+}
+.footer .portfolioLink:hover .rightArrow {
+  color: red;
+}
+
 .u-margin-large-div-bottom {
   margin-bottom: 2.55rem;
 }
@@ -159,9 +181,28 @@ body {
 }
 
 .footer {
-  text-align: center;
   background-color: #232323;
-  padding: 1.5rem;
+  min-height: 13vh;
+  padding: 1rem;
+}
+.footer__paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+}
+.footer__paragraph--introSpan {
+  display: inline-block;
+}
+.footer__paragraph--linkSpan {
+  text-align: center;
+  display: inline-block;
+  width: 22rem;
+}
+.footer__paragraph--linkSpan .portfolioLink {
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: font-size 0.2s;
 }
 
 .header {
@@ -176,10 +217,12 @@ body {
 .header .gameInfo__playerInfo, .header .gameInfo__gameSettings {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 0.5rem;
   background-color: #a3ffe0;
   box-shadow: 2px 2px 15px black;
+  width: 35%;
   padding: 1rem 3rem;
   margin: 1rem;
 }

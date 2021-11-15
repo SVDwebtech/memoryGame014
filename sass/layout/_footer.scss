@@ -1,5 +1,31 @@
 .footer {
-	text-align: center;
 	background-color: rgb(35, 35, 35);
-	padding: 1.5rem;
+
+	min-height: 13vh;
+
+	padding: 1rem;
+
+	&__paragraph {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		min-height: 5rem;
+
+		&--introSpan {
+			display: inline-block;
+		}
+
+		&--linkSpan {
+			text-align: center;
+			display: inline-block;
+			width: 22rem;
+
+			.portfolioLink {
+				padding: .5rem;
+				margin: 1rem;
+				transition: font-size .2s;
+			}
+		}
+	}
 }

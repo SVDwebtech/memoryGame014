@@ -11,12 +11,15 @@
 		&__gameSettings {
 			display: flex;
 			flex-direction: row;
+			justify-content: space-evenly;
 			align-items: center;
 
 			border-radius: .5rem;
 			background-color: rgb(163, 255, 224);
 			// background-color: whitesmoke;
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
+
+			width: 35%;
 
 			padding: 1rem 3rem;
 			margin: 1rem;

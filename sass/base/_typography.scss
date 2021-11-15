@@ -30,3 +30,28 @@ body {
 .gameInfo {
 	color: slategray;
 }
+
+.footer {
+	color: slategray;
+	font-size: 1.6rem;
+
+	.portfolioLink {
+		color: slategray;
+		font-size: 1.8rem;
+		font-weight: 600;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 2px;
+		text-decoration-color: slategray;
+	}
+
+	.portfolioLink:hover {
+		color: slategray;
+		font-size: 1.9rem;
+		font-weight: 800;
+		text-decoration-color: red;
+
+		.rightArrow {
+			color: red;
+		}
+	}
+}

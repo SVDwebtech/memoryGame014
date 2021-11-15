@@ -108,6 +108,9 @@ body {
 .gameInfo__gameSettings .gameSettingsLabel {
   font-size: 1.2rem;
 }
+.gameInfo__requireName {
+  font-size: 1rem;
+}
 
 .footer {
   color: slategray;
@@ -152,6 +155,10 @@ body {
   border: 2px solid #232323;
   box-shadow: 1px 1px 4px black;
   transition: all 0.2s;
+}
+.btn__exit {
+  padding: 0.15rem 0.5rem;
+  margin: 0.5rem 0rem 0.75rem;
 }
 .btn__loadGame:hover, .btn__startGame:hover, .btn__newGame:hover, .btn__exit:hover {
   background-color: rgba(255, 255, 255, 0.185);
@@ -344,10 +351,11 @@ body {
 }
 .header .gameInfo__requireName {
   background-color: #a3ffe0;
-  width: 23rem;
+  border: 2px solid #232323;
+  width: 20rem;
   position: absolute;
-  top: 1.5rem;
-  left: 1rem;
+  top: 2rem;
+  left: 2.5rem;
   z-index: 99;
 }
 

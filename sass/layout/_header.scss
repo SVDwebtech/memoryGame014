@@ -127,14 +127,15 @@
 
 		&__requireName {
 			background-color: rgb(163, 255, 224);
+			border: 2px solid rgb(35, 35, 35);
 
-			width: 23rem;
+			width: 20rem;
 
 			// padding: 1rem;
 
 			position: absolute;
-			top: 1.5rem;
-			left: 1rem;
+			top: 2rem;
+			left: 2.5rem;
 			z-index: 99;
 		}
 	}

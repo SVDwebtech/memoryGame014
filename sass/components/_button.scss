@@ -12,6 +12,11 @@
 		transition: all .2s;
 	}
 
+	&__exit {
+		padding: .15rem .5rem;
+		margin: .5rem 0rem .75rem;
+	}
+
 	&__loadGame:hover,
 	&__startGame:hover,
 	&__newGame:hover,

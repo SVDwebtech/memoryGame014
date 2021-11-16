@@ -202,6 +202,12 @@ body {
   margin: 1rem;
   position: relative;
 }
+@media (max-width: 37.5em) {
+  .card {
+    flex: 0 0 10vw;
+    min-height: 12vw;
+  }
+}
 .card__side {
   border-radius: 0.5rem;
   box-shadow: 2px 2px 15px #232323;
@@ -212,6 +218,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (max-width: 37.5em) {
+  .card__side {
+    min-height: 12vw;
+  }
 }
 .card__side--front {
   background-color: #232323;
@@ -251,6 +262,11 @@ body {
     max-width: 250px;
   }
 }
+@media (max-width: 37.5em) {
+  .card-container-twenty {
+    max-width: 90vw;
+  }
+}
 
 .card-container-forty {
   max-width: 700px;
@@ -269,6 +285,11 @@ body {
     max-width: 500px;
   }
 }
+@media (max-width: 37.5em) {
+  .card-container-forty {
+    max-width: 80vw;
+  }
+}
 
 .card-container-sixty {
   max-width: 1000px;
@@ -285,6 +306,11 @@ body {
     max-width: 500px;
   }
 }
+@media (max-width: 37.5em) {
+  .card-container-sixty {
+    max-width: 80vw;
+  }
+}
 
 .display-none {
   display: none;
@@ -294,11 +320,16 @@ body {
   background-color: #232323;
   min-height: 10vh;
 }
+@media (max-width: 37.5em) {
+  .footer {
+    min-height: 4vh;
+  }
+}
 .footer__paragraph {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 5rem;
+  min-height: 4vh;
 }
 .footer__paragraph--introSpan {
   display: inline-block;
@@ -323,6 +354,13 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 37.5em) {
+  .header .gameInfo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 .header .gameInfo__gamePannel {
   min-width: 40%;
   position: relative;
@@ -330,6 +368,12 @@ body {
 @media (max-width: 56.25em) {
   .header .gameInfo__gamePannel {
     min-width: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  .header .gameInfo__gamePannel {
+    min-width: 95%;
+    min-height: 12rem;
   }
 }
 .header .gameInfo__playerInfo {
@@ -349,6 +393,12 @@ body {
   left: 0;
   z-index: 100;
   transition: all 0.2s;
+}
+@media (max-width: 37.5em) {
+  .header .gameInfo__playerInfo {
+    width: 95%;
+    min-height: 6vh;
+  }
 }
 .header .gameInfo__playerInfo--divs {
   margin: 0 1rem;
@@ -373,6 +423,12 @@ body {
   left: 0;
   z-index: 200;
   transition: all 0.2s;
+}
+@media (max-width: 37.5em) {
+  .header .gameInfo__gameSettings {
+    width: 95%;
+    min-height: 6vh;
+  }
 }
 .header .gameInfo__gameSettings--nameInput {
   background-color: transparent;

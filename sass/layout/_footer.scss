@@ -3,12 +3,16 @@
 
 	min-height: 10vh;
 
+	@include respond(phone) {
+		min-height: 4vh;
+	}
+
 	&__paragraph {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		min-height: 5rem;
+		min-height: 4vh;
 
 		&--introSpan {
 			display: inline-block;

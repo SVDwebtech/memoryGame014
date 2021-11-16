@@ -9,6 +9,11 @@
 
 	position: relative;
 
+	@include respond(phone) {
+		flex: 0 0 10vw;
+		min-height: 12vw;
+	}
+
 	&__side {
 		border-radius: .5rem;
 		box-shadow: 2px 2px 15px rgb(35, 35, 35);
@@ -21,6 +26,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		@include respond(phone) {
+			min-height: 12vw;
+		}
 
 		&--front {
 			background-color: rgb(35, 35, 35);

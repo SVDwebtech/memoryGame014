@@ -7,12 +7,23 @@
 		display: flex;
 		justify-content: space-evenly;
 
+		@include respond(phone) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
 		&__gamePannel {
 			min-width: 40%;
 			position: relative;
 
 			@include respond(tab-port) {
 				min-width: 50%;
+			}
+
+			@include respond(phone) {
+				min-width: 95%;
+				min-height: 12rem;
 			}
 		}
 
@@ -39,6 +50,11 @@
 			z-index: 100;
 
 			transition: all .2s;
+
+			@include respond(phone) {
+				width: 95%;
+				min-height: 6vh;
+			}
 
 			&--divs {
 				margin: 0 1rem;
@@ -72,6 +88,11 @@
 			z-index: 200;
 
 			transition: all .2s;
+
+			@include respond(phone) {
+				width: 95%;
+				min-height: 6vh;
+			}
 
 			&--nameInput {
 				background-color: transparent;

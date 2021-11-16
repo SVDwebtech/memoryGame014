@@ -18,6 +18,10 @@
 	@include respond(tab-port) {
 		max-width: 250px;
 	}
+
+	@include respond(phone) {
+		max-width: 90vw;
+	}
 }
 
 .card-container-forty {
@@ -36,6 +40,10 @@
 	@include respond(tab-port) {
 		max-width: 500px;
 	}
+
+	@include respond(phone) {
+		max-width: 80vw;
+	}
 }
 
 .card-container-sixty {
@@ -50,6 +58,10 @@
 
 	@include respond(tab-port) {
 		max-width: 500px;
+	}
+
+	@include respond(phone) {
+		max-width: 80vw;
 	}
 }
 

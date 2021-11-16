@@ -3,7 +3,54 @@
 	flex-wrap: wrap;
 	justify-content: center;
 
+	max-width: 1000px;
+
 	padding: 2.5rem 10rem;
+	margin: 0 auto;
+}
+
+.card-container-twenty {
+	max-width: 350px;
+
+	padding: 2.5rem 0rem;
+	margin: 0 auto;
+
+	@include respond(tab-port) {
+		max-width: 250px;
+	}
+}
+
+.card-container-forty {
+	max-width: 700px;
+
+	padding: 2.5rem 0rem;
+	margin: 0 auto;
+
+	padding: 2.5rem 0rem;
+	margin: 0 auto;
+
+	@include respond(tab-land) {
+		max-width: 600px;
+	}
+
+	@include respond(tab-port) {
+		max-width: 500px;
+	}
+}
+
+.card-container-sixty {
+	max-width: 1000px;
+
+	padding: 2.5rem 0rem;
+	margin: 0 auto;
+
+	@include respond(tab-land) {
+		max-width: 750px;
+	}
+
+	@include respond(tab-port) {
+		max-width: 500px;
+	}
 }
 
 .display-none {

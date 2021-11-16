@@ -6,6 +6,12 @@ body {
 	color: rgb(180, 180, 180);
 }
 
+.btn {
+	@include respond(tab-port) {
+		font-size: 1.3rem;
+	}
+}
+
 .heading-primary {
 	&--main {
 		font-size: 2.5rem;
@@ -45,9 +51,15 @@ body {
 	&__gameSettings {
 		&--infoItem {
 			font-size: 1.2rem;
+			@include respond(tab-port) {
+				font-size: 1.4rem;
+			}
 		}
 		.gameSettingsLabel {
 			font-size: 1.2rem;
+			@include respond(tab-port) {
+				font-size: 1.4rem;
+			}
 		}
 	}
 

@@ -8,8 +8,12 @@
 		justify-content: space-evenly;
 
 		&__gamePannel {
-			min-width: 45%;
+			min-width: 40%;
 			position: relative;
+
+			@include respond(tab-port) {
+				min-width: 50%;
+			}
 		}
 
 		&__playerInfo {

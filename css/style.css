@@ -81,6 +81,12 @@ body {
   color: #b4b4b4;
 }
 
+@media (max-width: 56.25em) {
+  .btn {
+    font-size: 1.3rem;
+  }
+}
+
 .heading-primary--main {
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -105,8 +111,18 @@ body {
 .gameInfo__gameSettings--infoItem {
   font-size: 1.2rem;
 }
+@media (max-width: 56.25em) {
+  .gameInfo__gameSettings--infoItem {
+    font-size: 1.4rem;
+  }
+}
 .gameInfo__gameSettings .gameSettingsLabel {
   font-size: 1.2rem;
+}
+@media (max-width: 56.25em) {
+  .gameInfo__gameSettings .gameSettingsLabel {
+    font-size: 1.4rem;
+  }
 }
 .gameInfo__requireName {
   font-size: 1rem;
@@ -144,6 +160,10 @@ body {
 
 .u-margin-medium-div-bottom {
   margin-bottom: 1rem;
+}
+
+.u-margin-small-div-bottom {
+  margin-bottom: 0.5rem;
 }
 
 .btn {
@@ -304,8 +324,13 @@ body {
   justify-content: space-evenly;
 }
 .header .gameInfo__gamePannel {
-  min-width: 45%;
+  min-width: 40%;
   position: relative;
+}
+@media (max-width: 56.25em) {
+  .header .gameInfo__gamePannel {
+    min-width: 50%;
+  }
 }
 .header .gameInfo__playerInfo {
   display: flex;

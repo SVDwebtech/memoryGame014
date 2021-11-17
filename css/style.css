@@ -407,7 +407,7 @@ body {
 @media (max-width: 37.5em) {
   .header .gameInfo__playerInfo {
     width: 95%;
-    min-height: 6.2rem;
+    min-height: 10rem;
   }
 }
 .header .gameInfo__playerInfo--divs {
@@ -437,7 +437,7 @@ body {
 @media (max-width: 37.5em) {
   .header .gameInfo__gameSettings {
     width: 95%;
-    min-height: 6.2rem;
+    min-height: 10rem;
   }
 }
 .header .gameInfo__gameSettings--nameInput {

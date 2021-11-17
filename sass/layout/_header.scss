@@ -154,19 +154,31 @@
 			background-color: rgb(163, 255, 224);
 			border: 2px solid rgb(35, 35, 35);
 
-			width: 20rem;
-
-			// padding: 1rem;
+			min-width: 22vw;
+			min-height: 6.7rem;
 
 			position: absolute;
-			top: 2rem;
-			left: 2.5rem;
+			top: 1.8rem;
+			left: 4.5rem;
 			z-index: 99;
 
+			@include respond(tab-land) {
+				top: 1.9rem;
+				min-height: 7rem;
+			}
+
+			@include respond(tab-port) {
+				min-width: 29vw;
+				min-height: 9.5rem;
+				top: 1.9rem;
+				left: 4rem;
+			}
+
 			@include respond(phone) {
-				width: 30rem;
-				min-height: 7.2rem;
-				left: 5.5rem;
+				min-width: 52vw;
+				min-height: 8rem;
+				top: 1.8rem;
+				left: 2.7rem;
 			}
 		}
 	}

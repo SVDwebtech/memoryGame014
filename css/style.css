@@ -125,7 +125,17 @@ body {
   }
 }
 .gameInfo__requireName {
-  font-size: 1.3rem;
+  font-size: 1rem;
+}
+@media (max-width: 56.25em) {
+  .gameInfo__requireName {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .gameInfo__requireName {
+    font-size: 1.2rem;
+  }
 }
 
 .footer {
@@ -480,17 +490,33 @@ body {
 .header .gameInfo__requireName {
   background-color: #a3ffe0;
   border: 2px solid #232323;
-  width: 20rem;
+  min-width: 22vw;
+  min-height: 6.7rem;
   position: absolute;
-  top: 2rem;
-  left: 2.5rem;
+  top: 1.8rem;
+  left: 4.5rem;
   z-index: 99;
+}
+@media (max-width: 75em) {
+  .header .gameInfo__requireName {
+    top: 1.9rem;
+    min-height: 7rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .header .gameInfo__requireName {
+    min-width: 29vw;
+    min-height: 9.5rem;
+    top: 1.9rem;
+    left: 4rem;
+  }
 }
 @media (max-width: 37.5em) {
   .header .gameInfo__requireName {
-    width: 30rem;
-    min-height: 7.2rem;
-    left: 5.5rem;
+    min-width: 52vw;
+    min-height: 8rem;
+    top: 1.8rem;
+    left: 2.7rem;
   }
 }
 

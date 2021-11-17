@@ -20,7 +20,7 @@
 	}
 
 	@include respond(phone) {
-		max-width: 90vw;
+		max-width: 60vw;
 	}
 }
 
@@ -42,7 +42,7 @@
 	}
 
 	@include respond(phone) {
-		max-width: 80vw;
+		max-width: 70vw;
 	}
 }
 

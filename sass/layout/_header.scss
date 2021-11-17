@@ -39,7 +39,7 @@
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
 
 			width: 100%;
-			min-height: 13vh;
+			min-height: 8.1rem;
 
 			padding: 1rem 3rem;
 			margin: 1rem;
@@ -53,7 +53,7 @@
 
 			@include respond(phone) {
 				width: 95%;
-				min-height: 11vh;
+				min-height: 6.2rem;
 			}
 
 			&--divs {
@@ -77,7 +77,7 @@
 			box-shadow: 2px 2px 15px rgb(0, 0, 0);
 
 			width: 100%;
-			min-height: 13vh;
+			min-height: 8.1rem;
 
 			padding: 1rem 3rem;
 			margin: 1rem;
@@ -91,7 +91,7 @@
 
 			@include respond(phone) {
 				width: 95%;
-				min-height: 11vh;
+				min-height: 6.2rem;
 			}
 
 			&--nameInput {

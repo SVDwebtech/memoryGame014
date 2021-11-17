@@ -124,43 +124,43 @@ function checkCheckbox() {
 				cardSideDisplayBackTwenty[i].textContent = arr[i];
 				if (cardSideDisplayBackTwenty[i].textContent === "1") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape1.png)";
+						"url(img/shape1.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "2") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape2.png)";
+						"url(img/shape2.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "3") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape3.png)";
+						"url(img/shape3.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "4") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape4.png)";
+						"url(img/shape4.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "5") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape5.png)";
+						"url(img/shape5.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "6") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape6.png)";
+						"url(img/shape6.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "7") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape7.png)";
+						"url(img/shape7.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "8") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape8.png)";
+						"url(img/shape8.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "9") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape9.png)";
+						"url(img/shape9.png)";
 				}
 				else if (cardSideDisplayBackTwenty[i].textContent === "10") {
 					cardSideDisplayBackTwenty[i].style.backgroundImage =
-						"url(/img/shape10.png)";
+						"url(img/shape10.png)";
 				}
 			}
 		}
@@ -216,83 +216,83 @@ function checkCheckbox() {
 				cardSideDisplayBackForty[i].textContent = arr2[i];
 				if (cardSideDisplayBackForty[i].textContent === "1") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape1.png)";
+						"url(img/shape1.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "2") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape2.png)";
+						"url(img/shape2.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "3") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape3.png)";
+						"url(img/shape3.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "4") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape4.png)";
+						"url(img/shape4.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "5") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape5.png)";
+						"url(img/shape5.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "6") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape6.png)";
+						"url(img/shape6.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "7") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape7.png)";
+						"url(img/shape7.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "8") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape8.png)";
+						"url(img/shape8.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "9") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape9.png)";
+						"url(img/shape9.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "10") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape10.png)";
+						"url(img/shape10.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "11") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape11.png)";
+						"url(img/shape11.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "12") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape12.png)";
+						"url(img/shape12.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "13") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape13.png)";
+						"url(img/shape13.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "14") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape14.png)";
+						"url(img/shape14.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "15") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape15.png)";
+						"url(img/shape15.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "16") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape16.png)";
+						"url(img/shape16.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "17") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape17.png)";
+						"url(img/shape17.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "18") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape18.png)";
+						"url(img/shape18.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "19") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape19.png)";
+						"url(img/shape19.png)";
 				}
 				else if (cardSideDisplayBackForty[i].textContent === "20") {
 					cardSideDisplayBackForty[i].style.backgroundImage =
-						"url(/img/shape20.png)";
+						"url(img/shape20.png)";
 				}
 			}
 		}
@@ -368,123 +368,123 @@ function checkCheckbox() {
 				cardSideDisplayBackSixty[i].textContent = arr3[i];
 				if (cardSideDisplayBackSixty[i].textContent === "1") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape1.png)";
+						"url(img/shape1.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "2") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape2.png)";
+						"url(img/shape2.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "3") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape3.png)";
+						"url(img/shape3.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "4") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape4.png)";
+						"url(img/shape4.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "5") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape5.png)";
+						"url(img/shape5.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "6") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape6.png)";
+						"url(img/shape6.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "7") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape7.png)";
+						"url(img/shape7.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "8") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape8.png)";
+						"url(img/shape8.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "9") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape9.png)";
+						"url(img/shape9.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "10") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape10.png)";
+						"url(img/shape10.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "11") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape11.png)";
+						"url(img/shape11.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "12") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape12.png)";
+						"url(img/shape12.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "13") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape13.png)";
+						"url(img/shape13.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "14") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape14.png)";
+						"url(img/shape14.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "15") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape15.png)";
+						"url(img/shape15.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "16") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape16.png)";
+						"url(img/shape16.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "17") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape17.png)";
+						"url(img/shape17.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "18") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape18.png)";
+						"url(img/shape18.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "19") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape19.png)";
+						"url(img/shape19.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "20") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape20.png)";
+						"url(img/shape20.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "21") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape21.png)";
+						"url(img/shape21.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "22") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape22.png)";
+						"url(img/shape22.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "23") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape23.png)";
+						"url(img/shape23.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "24") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape24.png)";
+						"url(img/shape24.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "25") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape25.png)";
+						"url(img/shape25.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "26") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape26.png)";
+						"url(img/shape26.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "27") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape27.png)";
+						"url(img/shape27.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "28") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape28.png)";
+						"url(img/shape28.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "29") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape29.png)";
+						"url(img/shape29.png)";
 				}
 				else if (cardSideDisplayBackSixty[i].textContent === "30") {
 					cardSideDisplayBackSixty[i].style.backgroundImage =
-						"url(/img/shape30.png)";
+						"url(img/shape30.png)";
 				}
 			}
 		}

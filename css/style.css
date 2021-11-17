@@ -264,7 +264,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .card-container-twenty {
-    max-width: 90vw;
+    max-width: 60vw;
   }
 }
 
@@ -287,7 +287,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .card-container-forty {
-    max-width: 80vw;
+    max-width: 70vw;
   }
 }
 

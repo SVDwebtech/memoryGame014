@@ -487,4 +487,8 @@ body {
   z-index: 99;
 }
 
+.main {
+  background-image: url(/img/shape1.png);
+}
+
 /*# sourceMappingURL=style.css.map */
